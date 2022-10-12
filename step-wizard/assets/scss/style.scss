@@ -1,0 +1,153 @@
+.section-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+body {
+    font-family: system-ui;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn-netx {
+    text-align: center;
+    .btn-theme {
+        background: #E92E2E;
+        box-shadow: 0px 3px 13px #92212147;
+        border-radius: 5px;
+        padding: 20px 30px 23px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FFFFFF;
+        &.full-width {
+            display: block;
+        }
+    }
+}
+
+.progressBar {
+    ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 30px 0;
+        padding-left: 0;
+        justify-content: space-between;
+        li {
+            list-style: none;
+            position: relative;
+            &:first-child {}
+            &:last-child {
+                a {
+                    &::after {
+                        content: unset;
+                    }
+                }
+            }
+            a {
+                display: flex;
+                flex-wrap: wrap;
+                pointer-events: none;
+                &::after {
+                    content: "";
+                    pointer-events: none;
+                    width: 75%;
+                    height: 2px;
+                    background-color: #E2E2E2;
+                    position: absolute;
+                    top: 10px;
+                    right: -37%;
+                }
+                &.activeStep {
+                    span {
+                        &.ws-no {
+                            color: #fff;
+                            background-color: #2A2A2A;
+                        }
+                        &.ws-steps {
+                            color: #2A2A2A;
+                        }
+                    }
+                }
+                &.completeStep {
+                    pointer-events: visible;
+                    &::after {
+                        pointer-events: none;
+                        background-color: #2A2A2A;
+                    }
+                    span {
+                        &.ws-no {
+                            &::before {
+                                content: "\f00c";
+                                font-family: 'FontAwesome';
+                                font-size: 12px;
+                                color: #fff;
+                            }
+                            background-color: #2A2A2A;
+                            font-size: 0;
+                        }
+                        &.ws-steps {
+                            color: #2A2A2A;
+                        }
+                    }
+                }
+                span {
+                    text-align: center;
+                    width: 100%;
+                    &.ws-no {
+                        width: 22px;
+                        height: 22px;
+                        margin: 0 auto;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background: #E2E2E2;
+                        font-weight: 600;
+                        font-size: 14px;
+                        line-height: 12px;
+                        color: #949494;
+                        border-radius: 50%;
+                    }
+                    &.ws-steps {
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 17px;
+                        letter-spacing: 0.02em;
+                        color: #949494;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.wizard-stape-body {
+    background: #FFFFFF;
+    box-shadow: 0px 9px 30px rgba(0, 0, 0, 0.14);
+    border-radius: 10px;
+    .back-links {
+        padding: 20px 30px;
+        border-bottom: 1px solid #F3F3F3;
+        a {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+            color: #2A2A2A;
+        }
+    }
+    .content-box {
+        padding: 0px 30px 30px;
+        ul {
+            padding-left: 20px;
+            li {
+                margin-bottom: 20px;
+                list-style: decimal;
+            }
+        }
+    }
+}

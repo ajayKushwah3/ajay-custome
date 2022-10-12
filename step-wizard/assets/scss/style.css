@@ -1,0 +1,140 @@
+.section-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+body {
+  font-family: system-ui;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn-netx {
+  text-align: center;
+}
+.btn-netx .btn-theme {
+  background: #E92E2E;
+  box-shadow: 0px 3px 13px rgba(146, 33, 33, 0.2784313725);
+  border-radius: 5px;
+  padding: 20px 30px 23px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+}
+.btn-netx .btn-theme.full-width {
+  display: block;
+}
+
+.progressBar ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 30px 0;
+  padding-left: 0;
+  justify-content: space-between;
+}
+.progressBar ul li {
+  list-style: none;
+  position: relative;
+}
+.progressBar ul li:last-child a::after {
+  content: unset;
+}
+.progressBar ul li a {
+  display: flex;
+  flex-wrap: wrap;
+  pointer-events: none;
+}
+.progressBar ul li a::after {
+  content: "";
+  pointer-events: none;
+  width: 75%;
+  height: 2px;
+  background-color: #E2E2E2;
+  position: absolute;
+  top: 10px;
+  right: -37%;
+}
+.progressBar ul li a.activeStep span.ws-no {
+  color: #fff;
+  background-color: #2A2A2A;
+}
+.progressBar ul li a.activeStep span.ws-steps {
+  color: #2A2A2A;
+}
+.progressBar ul li a.completeStep {
+  pointer-events: visible;
+}
+.progressBar ul li a.completeStep::after {
+  pointer-events: none;
+  background-color: #2A2A2A;
+}
+.progressBar ul li a.completeStep span.ws-no {
+  background-color: #2A2A2A;
+  font-size: 0;
+}
+.progressBar ul li a.completeStep span.ws-no::before {
+  content: "\f00c";
+  font-family: "FontAwesome";
+  font-size: 12px;
+  color: #fff;
+}
+.progressBar ul li a.completeStep span.ws-steps {
+  color: #2A2A2A;
+}
+.progressBar ul li a span {
+  text-align: center;
+  width: 100%;
+}
+.progressBar ul li a span.ws-no {
+  width: 22px;
+  height: 22px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #E2E2E2;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 12px;
+  color: #949494;
+  border-radius: 50%;
+}
+.progressBar ul li a span.ws-steps {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.02em;
+  color: #949494;
+}
+
+.wizard-stape-body {
+  background: #FFFFFF;
+  box-shadow: 0px 9px 30px rgba(0, 0, 0, 0.14);
+  border-radius: 10px;
+}
+.wizard-stape-body .back-links {
+  padding: 20px 30px;
+  border-bottom: 1px solid #F3F3F3;
+}
+.wizard-stape-body .back-links a {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #2A2A2A;
+}
+.wizard-stape-body .content-box {
+  padding: 0px 30px 30px;
+}
+.wizard-stape-body .content-box ul {
+  padding-left: 20px;
+}
+.wizard-stape-body .content-box ul li {
+  margin-bottom: 20px;
+  list-style: decimal;
+}/*# sourceMappingURL=style.css.map */

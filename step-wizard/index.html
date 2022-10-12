@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step Wizard</title>
+    <link rel="stylesheet" href="assets/scss/style.css">
+    <script src="https://use.fontawesome.com/fecf8b2dda.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</head>
+
+<body>
+    <section>
+        <div class="section-container">
+            <div class="progressBar">
+                <ul>
+                    <li><a href="#" data-step="0" class="pSteps step_1 back-step activeStep" data-tab-id="1"><span class="ws-no">1</span><span class="ws-steps">Step 1</span></a></li>
+                    <li><a href="#" data-step="1" class="pSteps step_2 back-step" data-tab-id="2"><span class="ws-no">2</span><span class="ws-steps">Step 2</span></a></li>
+                    <li><a href="#" data-step="2" class="pSteps step_3 back-step" data-tab-id="3"><span class="ws-no">3</span><span class="ws-steps">Step 3</span></a></li>
+                    <li><a href="#" data-step="3" class="pSteps step_4 back-step" data-tab-id="4"><span class="ws-no">4</span><span class="ws-steps">Step 4</span></a></li>
+                </ul>
+            </div>
+
+            <div class="wizard-stape-body">
+                <div class="wizard-stape-cart" id="wizard_stape_1" style="display:block;">
+                    <div class="back-links">
+                        <a href="javascript:void(0);"><i class="fa fa-angle-left" aria-hidden="true"></i> Back to Home</a>
+                    </div>
+                    <div class="content-box">
+                        <h3>Measurements</h3>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem eos, exercitationem atque corrupti tempore adipisci aspernatur, saepe a quia molestiae quisquam magni aut? Perspiciatis, blanditiis. Nesciunt sapiente enim culpa
+                                fuga?
+                            </li>
+
+
+                        </ul>
+                        <div class="btn-netx">
+                            <a href="#" class="btn-theme full-width next-step" data-step="1">Continue </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="wizard-stape-cart" id="wizard_stape_2" style="display:none;">
+                    <div class="back-links">
+                        <a href="javascript:void(0);" class="prev_action" data-step="2"><i class="fa fa-angle-left" aria-hidden="true"></i> Back </a>
+                    </div>
+                    <div class="content-box">
+                        <h3>Measurements</h3>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem eos, exercitationem atque corrupti tempore adipisci aspernatur, saepe a quia molestiae quisquam magni aut? Perspiciatis, blanditiis. Nesciunt sapiente enim culpa
+                                fuga?
+                            </li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem eos, exercitationem atque corrupti tempore adipisci aspernatur, saepe a quia molestiae quisquam magni aut? Perspiciatis, blanditiis. Nesciunt sapiente enim culpa
+                                fuga?
+                            </li>
+
+
+                        </ul>
+                        <div class="btn-netx">
+                            <a href="#" class="btn-theme full-width next-step" data-step="2">Continue </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="wizard-stape-cart" id="wizard_stape_3" style="display:none;">
+                    <div class="back-links">
+                        <a href="javascript:void(0);" class="prev_action" data-step="3"><i class="fa fa-angle-left" aria-hidden="true"></i> Back </a>
+                    </div>
+                    <div class="content-box">
+                        <h3>Measurements</h3>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem eos, exercitationem atque corrupti tempore adipisci aspernatur, saepe a quia molestiae quisquam magni aut? Perspiciatis, blanditiis. Nesciunt sapiente enim culpa
+                                fuga?
+                            </li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem eos, exercitationem atque corrupti tempore adipisci aspernatur, saepe a quia molestiae quisquam magni aut? Perspiciatis, blanditiis. Nesciunt sapiente enim culpa
+                                fuga?
+                            </li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem eos, exercitationem atque corrupti tempore adipisci aspernatur, saepe a quia molestiae quisquam magni aut? Perspiciatis, blanditiis. Nesciunt sapiente enim culpa
+                                fuga?
+                            </li>
+
+
+                        </ul>
+                        <div class="btn-netx">
+                            <a href="#" class="btn-theme full-width next-step" data-step="3">Continue </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="wizard-stape-cart" id="wizard_stape_4" style="display:none;">
+                    <div class="back-links">
+                        <a href="javascript:void(0);" class="prev_action" data-step="4"><i class="fa fa-angle-left" aria-hidden="true"></i> Back </a>
+                    </div>
+                    <div class="content-box">
+                        <h3>Measurements</h3>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem eos, exercitationem atque corrupti tempore adipisci aspernatur, saepe a quia molestiae quisquam magni aut? Perspiciatis, blanditiis. Nesciunt sapiente enim culpa
+                                fuga?
+                            </li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem eos, exercitationem atque corrupti tempore adipisci aspernatur, saepe a quia molestiae quisquam magni aut? Perspiciatis, blanditiis. Nesciunt sapiente enim culpa
+                                fuga?
+                            </li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem eos, exercitationem atque corrupti tempore adipisci aspernatur, saepe a quia molestiae quisquam magni aut? Perspiciatis, blanditiis. Nesciunt sapiente enim culpa
+                                fuga?
+                            </li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem eos, exercitationem atque corrupti tempore adipisci aspernatur, saepe a quia molestiae quisquam magni aut? Perspiciatis, blanditiis. Nesciunt sapiente enim culpa
+                                fuga?
+                            </li>
+
+
+                        </ul>
+                        <div class="btn-netx">
+                            <a href="#" class="btn-theme full-width">Finish</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</body>
+
+</html>
