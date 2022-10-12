@@ -1,0 +1,78 @@
+.main-section {
+  width: 100%;
+  padding: 100px 50px;
+}
+
+.main-section .iner-continer {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  height: 600px;
+}
+
+.main-section .cHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: calc(100% - 80px);
+  margin: 0 auto;
+  height: 40px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.main-section .cHeader .cuntsRomes {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #000;
+  font-weight: 600;
+  border: 1px solid #ddd;
+  background-color: #ededed;
+}
+
+.main-section .main-body .left-cart {
+  position: absolute;
+  left: 0;
+  width: 40px;
+}
+
+.main-section .main-body .cuntsHours {
+  position: absolute;
+  display: block;
+  width: 100%;
+}
+
+.main-section .main-body .right-cart {
+  position: absolute;
+  right: 0;
+  width: 40px;
+}
+
+.main-section .main-body .min-cart {
+  position: relative;
+}
+
+.main-section .main-body .min-cart .cuntsLineHours {
+  position: absolute;
+  width: calc(100% - 80px);
+  height: 1px;
+  border-top: 1px solid #e2e2e2;
+  margin: 0 auto;
+  left: 40px;
+}
+
+.main-section .main-body .min-cart .cuntsLineHours.cuntsLineMints {
+  border-top: 1px dotted #e2e2e2;
+}
+/*# sourceMappingURL=style.css.map */

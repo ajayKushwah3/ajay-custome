@@ -1,0 +1,62 @@
+.main-section {
+    width: 100%;
+    padding: 100px 50px;
+    .iner-continer {
+        max-width: 1600px;
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        height: 600px;
+    }
+    .cHeader {
+        display: flex;
+        width: calc(100% - 80px);
+        margin: 0 auto;
+        height: 40px;
+        position: relative;
+        margin-bottom: 20px;
+        .cuntsRomes {
+            position: absolute;
+            top: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #000;
+            font-weight: 600;
+            border: 1px solid #ddd;
+            background-color: #ededed;
+        }
+    }
+    .main-body {
+        .left-cart {
+            position: absolute;
+            left: 0;
+            width: 40px;
+        }
+        .cuntsHours {
+            position: absolute;
+            display: block;
+            width: 100%;
+        }
+        .right-cart {
+            position: absolute;
+            right: 0;
+            width: 40px;
+        }
+        .min-cart {
+            position: relative;
+            .cuntsLineHours {
+                position: absolute;
+                width: calc(100% - 80px);
+                height: 1px;
+                border-top: 1px solid #e2e2e2;
+                margin: 0 auto;
+                left: 40px;
+                &.cuntsLineMints {
+                    border-top: 1px dotted #e2e2e2;
+                }
+            }
+        }
+    }
+}
