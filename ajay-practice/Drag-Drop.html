@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+
+
+    <!-- <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" /> -->
+    <style>
+        .ui-sortable-helper {
+            transform: rotate(5deg);
+            transition: transform 0.1s ease-in;
+        }
+        
+        .ui-sortable-placeholder {
+            background-color: #000;
+            margin: 10px;
+            padding: 10px;
+        }
+        
+        .ui-sortable-placeholder-nested {
+            background-color: #4a4a4a;
+            margin: 10px;
+            padding: 10px;
+        }
+        
+        .new-flex1 {
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(30, 100px);
+            text-align: center;
+        }
+        
+        .ne-d-p {
+            position: absolute;
+            left: 0;
+            width: max-content;
+            border: 1px solid;
+            z-index: 9;
+        }
+        
+        .sec01_droppable {
+            cursor: move;
+            height: 160px;
+        }
+        
+        .new-flex {
+            display: flex;
+            width: 100%;
+            position: relative;
+            text-align: center;
+        }
+        
+        .droppable {
+            padding: 3px 10px;
+            margin: 0 8px;
+            border: 1px solid;
+            cursor: move;
+            background: #DDD;
+        }
+        
+        .sec1_droppable,
+        .sec2_droppable,
+        .sec3_droppable,
+        .sec4_droppable,
+        .sec5_droppable,
+        .sec6_droppable,
+        .sec7_droppable,
+        .sec8_droppable {
+            cursor: move;
+            position: relative;
+        }
+        
+        .sec02_droppable {
+            cursor: move;
+            margin-bottom: -1px;
+            margin: 0px;
+        }
+        
+        .sec03_droppable {
+            cursor: move;
+            padding-bottom: 20px;
+        }
+        
+        .sec01_droppable {
+            cursor: move;
+        }
+        
+        .bac-color1 {
+            background-color: #FFF8DC;
+        }
+        
+        .bac-color2 {
+            background-color: #FFEBCD;
+        }
+        
+        .bac-color3 {
+            background-color: #FFEBCD;
+        }
+        
+        .bac-color4 {
+            background-color: #FFDEAD;
+        }
+        
+        .bac-color5 {
+            background-color: #F5DEB3;
+        }
+        
+        .bac-color6 {
+            background-color: #DEB887;
+        }
+        
+        .bac-color7 {
+            background-color: #D2B48C;
+        }
+        
+        .bac-color8 {
+            background-color: #BC8F8F;
+        }
+        
+        .bac-color9 {
+            background-color: #F4A460;
+        }
+        
+        .bac-color10 {
+            background-color: #DAA520;
+        }
+        
+        .bac-color11 {
+            background-color: #CD853F;
+        }
+        
+        .bac-color12 {
+            background-color: #D2691E;
+        }
+        
+        .bac-color12 {
+            background-color: #8B4513;
+        }
+        
+        .bac-color14 {
+            background-color: #FFE4E1;
+        }
+        
+        .bac-color15 {
+            background-color: #FFF0F5;
+        }
+        
+        .bac-color16 {
+            background-color: #FAF0E6;
+        }
+        
+        .bac-color17 {
+            background-color: #FAEBD7;
+        }
+        
+        .bac-color18 {
+            background-color: #FFFFF0;
+        }
+        
+        .bac-color19 {
+            background-color: #FFFAF0;
+        }
+        
+        .bac-color20 {
+            background-color: #FDF5E6;
+        }
+        
+        .bac-color21 {
+            background-color: #F5F5DC;
+        }
+        
+        .bac-color22 {
+            background-color: #FFF5EE;
+        }
+        
+        .bac-color24 {
+            background-color: #F5F5F5;
+        }
+        
+        .bac-color25 {
+            background-color: #F8F8FF;
+        }
+        
+        .bac-color26 {
+            background-color: #F0F8FF;
+        }
+        
+        .bac-color27 {
+            background-color: #F0FFFF;
+        }
+        
+        .bac-color28 {
+            background-color: #F5FFFA;
+        }
+        
+        .bac-color29 {
+            background-color: #F0FFF0;
+        }
+        
+        .bac-color30 {
+            background-color: #FFFAFA;
+        }
+        
+        .border-in {
+            border: 1px solid;
+            padding: 15px;
+        }
+        
+        .sec3_droppable {
+            padding: 15px;
+            border: 1px solid;
+        }
+        
+        .ne-d-p:before {
+            position: absolute;
+            content: "";
+            border-left: 10px solid #0000;
+            top: -10px;
+            left: 0;
+            border-bottom: 10px solid #000;
+            border-right: 10px solid #0000;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="new-a">
+        <div class="container">
+            <div class="">
+                <div class="new-flex1">
+                    <div class="date bac-color1">
+                        <sapn>1</sapn>
+                    </div>
+                    <div class="date bac-color2">
+                        <sapn>2</sapn>
+                    </div>
+                    <div class="date bac-color3">
+                        <sapn>3</sapn>
+                    </div>
+                    <div class="date bac-color4">
+                        <sapn>4</sapn>
+                    </div>
+                    <div class="date bac-color5">
+                        <sapn>5</sapn>
+                    </div>
+                    <div class="date bac-color6">
+                        <sapn>6</sapn>
+                    </div>
+                    <div class="date bac-color7">
+                        <sapn>7</sapn>
+                    </div>
+                    <div class="date bac-color8">
+                        <sapn>8</sapn>
+                    </div>
+                    <div class="date bac-color9">
+                        <sapn>9</sapn>
+                    </div>
+                    <div class="date bac-color10">
+                        <sapn>10</sapn>
+                    </div>
+                    <div class="date bac-color11">
+                        <sapn>11</sapn>
+                    </div>
+                    <div class="date bac-color12">
+                        <sapn>12</sapn>
+                    </div>
+                    <div class="date bac-color13">
+                        <sapn>13</sapn>
+                    </div>
+                    <div class="date bac-color14">
+                        <sapn>14</sapn>
+                    </div>
+                    <div class="date bac-color15">
+                        <sapn>15</sapn>
+                    </div>
+                    <div class="date bac-color16">
+                        <sapn>16</sapn>
+                    </div>
+                    <div class="date bac-color17">
+                        <sapn>17</sapn>
+                    </div>
+                    <div class="date bac-color18">
+                        <sapn>18</sapn>
+                    </div>
+                    <div class="date bac-color19">
+                        <sapn>19</sapn>
+                    </div>
+                    <div class="date bac-color20">
+                        <sapn>20</sapn>
+                    </div>
+                    <div class="date bac-color21">
+                        <sapn>21</sapn>
+                    </div>
+                    <div class="date bac-color22">
+                        <sapn>22</sapn>
+                    </div>
+                    <div class="date bac-color23">
+                        <sapn>23</sapn>
+                    </div>
+                    <div class="date bac-color24">
+                        <sapn>24</sapn>
+                    </div>
+                    <div class="date bac-color25">
+                        <sapn>25</sapn>
+                    </div>
+                    <div class="date bac-color26">
+                        <sapn>26</sapn>
+                    </div>
+                    <div class="date bac-color27">
+                        <sapn>27</sapn>
+                    </div>
+                    <div class="date bac-color28">
+                        <sapn>28</sapn>
+                    </div>
+                    <div class="date bac-color29">
+                        <sapn>29</sapn>
+                    </div>
+                    <div class="date bac-color30">
+                        <sapn>30</sapn>
+                    </div>
+                </div>
+                <div class="new-flex1 sec01_droppable">
+
+                    <div class="date bac-color1 sec1_droppable">
+                        <div class="">
+                            <div class="ne-d-p bac-color1">FIT20-0104
+                                <div class="new-flex">
+                                    <div class="sec2_droppable">
+                                        <div class="border-in">ISTANBUL - ARMAGRANDİ SPİNA HOTEL
+                                            <div class="new-flex">
+                                                <div class="sec3_droppable">
+                                                    <div class="">ARRİVAL TRANSFER @10:00</div>
+                                                </div>
+                                                <div class="sec3_droppable">
+                                                    <div class="">SULTANAHMET TOUR @08:30</div>
+                                                </div>
+                                                <div class="sec3_droppable">
+                                                    <div class="">BOSPHORUS TOUR @08:30</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sec2_droppable">
+                                        <div class="border-in">ISTANBUL - ARMAGRANDİ SPİNA HOTEL
+                                            <div class="new-flex">
+                                                <div class="sec3_droppable">
+                                                    <div class="">ARRİVAL TRANSFER @10:00</div>
+                                                </div>
+                                                <div class="sec3_droppable">
+                                                    <div class="">SULTANAHMET TOUR @08:30</div>
+                                                </div>
+                                                <div class="sec3_droppable">
+                                                    <div class="">BOSPHORUS TOUR @08:30</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sec2_droppable">
+                                        <div class="border-in">ISTANBUL - ARMAGRANDİ SPİNA HOTEL
+                                            <div class="new-flex">
+                                                <div class="sec3_droppable">
+                                                    <div class="">ARRİVAL TRANSFER @10:00</div>
+                                                </div>
+                                                <div class="sec3_droppable">
+                                                    <div class="">SULTANAHMET TOUR @08:30</div>
+                                                </div>
+                                                <div class="sec3_droppable">
+                                                    <div class="">BOSPHORUS TOUR @08:30</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="date bac-color2 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color3 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color4 sec1_droppable">
+
+                    </div>
+
+                    <div class="date bac-color5 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color6 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color7 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color8 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color9 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color10 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color11 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color12 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color13 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color14 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color15 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color16 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color17 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color18 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color19 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color20 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color21 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color22 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color23 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color24 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color25 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color26 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color27 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color28 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color29 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color30 sec1_droppable">
+
+                    </div>
+                </div>
+                <div class="new-flex1 sec01_droppable">
+
+                    <div class="date bac-color1 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color2 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color3 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color4 sec1_droppable">
+
+                    </div>
+
+                    <div class="date bac-color5 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color6 sec1_droppable">
+                        <div class="">
+                            <div class="ne-d-p bac-color6">FIT20-0104
+                                <div class="new-flex">
+                                    <div class="sec2_droppable">
+                                        <div class="border-in">ISTANBUL - ARMAGRANDİ SPİNA HOTEL
+                                            <div class="new-flex">
+                                                <div class="sec3_droppable">
+                                                    <div class="">ARRİVAL TRANSFER @10:00</div>
+                                                </div>
+                                                <div class="sec3_droppable">
+                                                    <div class="">SULTANAHMET TOUR @08:30</div>
+                                                </div>
+                                                <div class="sec3_droppable">
+                                                    <div class="">BOSPHORUS TOUR @08:30</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sec2_droppable">
+                                        <div class="border-in">ISTANBUL - ARMAGRANDİ SPİNA HOTEL
+                                            <div class="new-flex">
+                                                <div class="sec3_droppable">
+                                                    <div class="">ARRİVAL TRANSFER @10:00</div>
+                                                </div>
+                                                <div class="sec3_droppable">
+                                                    <div class="">SULTANAHMET TOUR @08:30</div>
+                                                </div>
+                                                <div class="sec3_droppable">
+                                                    <div class="">BOSPHORUS TOUR @08:30</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sec2_droppable">
+                                        <div class="border-in">ISTANBUL - ARMAGRANDİ SPİNA HOTEL
+                                            <div class="new-flex">
+                                                <div class="sec3_droppable">
+                                                    <div class="">ARRİVAL TRANSFER @10:00</div>
+                                                </div>
+                                                <div class="sec3_droppable">
+                                                    <div class="">SULTANAHMET TOUR @08:30</div>
+                                                </div>
+                                                <div class="sec3_droppable">
+                                                    <div class="">BOSPHORUS TOUR @08:30</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="date bac-color7 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color8 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color9 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color10 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color11 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color12 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color13 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color14 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color15 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color16 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color17 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color18 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color19 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color20 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color21 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color22 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color23 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color24 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color25 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color26 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color27 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color28 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color29 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color30 sec1_droppable">
+
+                    </div>
+                </div>
+                <div class="new-flex1 sec01_droppable">
+
+                    <div class="date bac-color1 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color2 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color3 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color4 sec1_droppable">
+
+                    </div>
+
+                    <div class="date bac-color5 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color6 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color7 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color8 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color9 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color10 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color11 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color12 sec1_droppable">
+                        <div class="">
+                            <div class="ne-d-p bac-color12">FIT20-0104
+                                <div class="new-flex">
+                                    <div class="sec2_droppable">
+                                        <div class="border-in">ISTANBUL - ARMAGRANDİ SPİNA HOTEL
+                                            <div class="new-flex">
+                                                <div class="sec3_droppable">
+                                                    <div class="">ARRİVAL TRANSFER @10:00</div>
+                                                </div>
+                                                <div class="sec3_droppable">
+                                                    <div class="">SULTANAHMET TOUR @08:30</div>
+                                                </div>
+                                                <div class="sec3_droppable">
+                                                    <div class="">BOSPHORUS TOUR @08:30</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sec2_droppable">
+                                        <div class="border-in">ISTANBUL - ARMAGRANDİ SPİNA HOTEL
+                                            <div class="new-flex">
+                                                <div class="sec3_droppable">
+                                                    <div class="">ARRİVAL TRANSFER @10:00</div>
+                                                </div>
+                                                <div class="sec3_droppable">
+                                                    <div class="">SULTANAHMET TOUR @08:30</div>
+                                                </div>
+                                                <div class="sec3_droppable">
+                                                    <div class="">BOSPHORUS TOUR @08:30</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sec2_droppable">
+                                        <div class="border-in">ISTANBUL - ARMAGRANDİ SPİNA HOTEL
+                                            <div class="new-flex">
+                                                <div class="sec3_droppable">
+                                                    <div class="">ARRİVAL TRANSFER @10:00</div>
+                                                </div>
+                                                <div class="sec3_droppable">
+                                                    <div class="">SULTANAHMET TOUR @08:30</div>
+                                                </div>
+                                                <div class="sec3_droppable">
+                                                    <div class="">BOSPHORUS TOUR @08:30</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="date bac-color13 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color14 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color15 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color16 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color17 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color18 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color19 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color20 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color21 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color22 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color23 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color24 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color25 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color26 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color27 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color28 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color29 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color30 sec1_droppable">
+
+                    </div>
+                </div>
+                <div class="new-flex1 sec01_droppable">
+
+                    <div class="date bac-color1 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color2 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color3 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color4 sec1_droppable">
+
+                    </div>
+
+                    <div class="date bac-color5 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color6 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color7 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color8 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color9 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color10 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color11 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color12 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color13 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color14 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color15 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color16 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color17 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color18 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color19 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color20 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color21 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color22 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color23 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color24 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color25 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color26 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color27 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color28 sec1_droppable">
+                        <div class="">
+                            <div class="ne-d-p bac-color28">FIT20-0104
+                                <div class="new-flex">
+                                    <div class="sec2_droppable">
+                                        <div class="border-in">ISTANBUL - ARMAGRANDİ SPİNA HOTEL
+                                            <div class="new-flex">
+                                                <div class="sec3_droppable">
+                                                    <div class="">ARRİVAL TRANSFER @10:00</div>
+                                                </div>
+                                                <div class="sec3_droppable">
+                                                    <div class="">SULTANAHMET TOUR @08:30</div>
+                                                </div>
+                                                <div class="sec3_droppable">
+                                                    <div class="">BOSPHORUS TOUR @08:30</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sec2_droppable">
+                                        <div class="border-in">ISTANBUL - ARMAGRANDİ SPİNA HOTEL
+                                            <div class="new-flex">
+                                                <div class="sec3_droppable">
+                                                    <div class="">ARRİVAL TRANSFER @10:00</div>
+                                                </div>
+                                                <div class="sec3_droppable">
+                                                    <div class="">SULTANAHMET TOUR @08:30</div>
+                                                </div>
+                                                <div class="sec3_droppable">
+                                                    <div class="">BOSPHORUS TOUR @08:30</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sec2_droppable">
+                                        <div class="border-in">ISTANBUL - ARMAGRANDİ SPİNA HOTEL
+                                            <div class="new-flex">
+                                                <div class="sec3_droppable">
+                                                    <div class="">ARRİVAL TRANSFER @10:00</div>
+                                                </div>
+                                                <div class="sec3_droppable">
+                                                    <div class="">SULTANAHMET TOUR @08:30</div>
+                                                </div>
+                                                <div class="sec3_droppable">
+                                                    <div class="">BOSPHORUS TOUR @08:30</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="date bac-color29 sec1_droppable">
+
+                    </div>
+                    <div class="date bac-color30 sec1_droppable">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            setSortableElement(".sec1_droppable", "ui-sortable-placeholder1", false, false);
+            setSortableElement(".sec2_droppable", "ui-sortable-placeholder2", false, false);
+            setSortableElement(".sec3_droppable", "ui-sortable-placeholder3", false, false);
+            setSortableElement(".sec4_droppable", "ui-sortable-placeholder4", false, false);
+            setSortableElement(".sec5_droppable", "ui-sortable-placeholder5", false, false);
+            setSortableElement(".sec6_droppable", "ui-sortable-placeholder6", false, false);
+            setSortableElement(".sec01_droppable", "ui-sortable-placeholder01", false, false);
+            setSortableElement(".sec02_droppable", "ui-sortable-placeholder02", false, false);
+            setSortableElement(".sec03_droppable", "ui-sortable-placeholder03", false, false);
+
+            function setSortableElement(jqueryIdentifier, placeholderName, animateElementOnDrop, canDragElementsOffScreen) {
+                $(jqueryIdentifier).sortable({
+                    connectWith: jqueryIdentifier,
+                    placeholder: placeholderName,
+                    forcePlaceholderSize: false,
+                    forceHelperSize: true,
+                    revert: animateElementOnDrop,
+                    scroll: canDragElementsOffScreen,
+                    cancel: ".ui-resizable-handle"
+                });
+            }
+
+        });
+    </script>
+</body>
+
+</html>

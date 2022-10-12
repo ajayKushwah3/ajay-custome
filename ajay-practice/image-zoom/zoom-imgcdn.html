@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashnam </title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/drift-zoom/1.3.1/drift-basic.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/drift-zoom/1.3.1/drift-basic.min.css">
+
+    <main id="mt-main" class="homage-about">
+
+        <style type="text/css">
+            .demo-area {
+                background: $color_invert_fg;
+                border-radius: 8px;
+                padding: 20px;
+            }
+            
+            .demo-trigger {
+                display: inline-block;
+                width: 40%;
+                float: left;
+                cursor: zoom-in
+            }
+            
+            .demo-trigger img {
+                max-width: 100%;
+            }
+            
+            .detail {
+                position: relative;
+                width: 55%;
+                margin-left: 5%;
+                float: left;
+                min-height: 240px;
+            }
+            
+            .drift-zoom-pane {
+                height: 300px;
+            }
+            
+            @media (max-width: 900px) {
+                .detail,
+                .demo-trigger {
+                    float: none;
+                }
+                .demo-trigger {
+                    display: block;
+                    width: 100%;
+                    max-width: 300px;
+                    text-align: center;
+                    margin: 0 auto;
+                    cursor: zoom-in;
+                }
+                .detail {
+                    text-align: center;
+                    margin: 0 auto;
+                    min-height: 0;
+                    width: 100%;
+                    max-width: 32em;
+                    h3 {
+                        margin-top: 1em;
+                    }
+                }
+                p {
+                    margin: 0 auto 1em;
+                }
+                ul {
+                    text-align: left;
+                }
+                .responsive-hint {
+                    display: none;
+                }
+            }
+        </style>
+
+
+        <section class="content">
+            <article class="demo-area">
+                <a class="demo-trigger" href="https://assets.imgix.net/unsplash/vintagecameras.jpg?w=1200&ch=DPR&dpr=2">
+                    <img src="https://assets.imgix.net/unsplash/vintagecameras.jpg?w=300&fit=crop&ch=DPR&dpr=2">
+                </a>
+
+                <div class="detail">
+
+                    <h3>Magnify & Zoom</h3>
+                    <p>Drift and Luminous are two lightweight js libraries that are easy to implement on your site to enable zoom and magnification for your images.</p>
+                    <ul>
+                        <li>Hover over the camera image to magnify!</li>
+                        <li>You can also click to zoom!</li>
+                        <li>Works as touch on mobile devices!</li>
+                        <li>imgix makes it simple to dynamically size.</li>
+                        <li class="responsive-hint">(Psst… try making your browser window smaller!)</li>
+                    </ul>
+
+                </div>
+            </article>
+        </section>
+        <section>
+
+
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/drift-zoom/1.3.1/Drift.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/drift-zoom/1.3.1/Drift.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/drift-zoom/1.3.1/Drift.min.js.map"></script>
+    <script>
+        $(document).on('click', '.sm_img', function() {
+            $('.big_img').attr('src', $(this).attr('src'));
+            $('.big_img1').attr('href', $(this).attr('src'));
+        })
+
+        var demoTrigger = document.querySelector('.demo-trigger');
+
+        new Drift(demoTrigger, {
+            paneContainer: document.querySelector('.detail'),
+            inlinePane: 900,
+            inlineOffsetY: -85,
+            containInline: true,
+            sourceAttribute: 'href'
+        });
+
+        new Luminous(demoTrigger);
+    </script>
+
+    </body>
+
+</html>

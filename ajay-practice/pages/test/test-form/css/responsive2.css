@@ -1,0 +1,102 @@
+@media only screen and (max-width: 767px) {
+
+    .switch-1 {
+        width: 31%;
+        font-size: 13px;
+        font-weight: 600;
+        color: #1f4663;
+    }
+    .switch-2 {
+        width: 27%;
+        font-size: 13px;
+    }
+    .switch-2 i {
+        color: #fcb43e;
+        font-size: 20px;
+    }
+    .switch-2 span:nth-child(2) {
+        position: absolute;
+        margin-top: 2px;
+        margin-left: 4px;
+        font-weight: 600;
+    }
+    .switch-4 span:nth-child(2) {
+        position: absolute;
+        margin-top: 2px;
+        margin-left: 4px;
+        font-size: 13px;
+        font-weight: 600;
+    }
+    .switch-4 i {
+        color: #1f4663;
+        font-size: 20px;
+    }
+    .switch-4 {
+        text-align: center;
+        width: 30%;
+    }
+    .switch-3 {
+        width: 12%;
+    }
+    .tablinks {
+        background: #fff;
+        border: 2px solid #fff !important;
+        border: none;
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .chart {
+        width: 100%;
+        min-height: 450px;
+    }
+
+    .box-shedo {
+         box-shadow: none;
+        border-radius: 5px;
+    }
+
+}
+
+@media only screen and (max-width: 540px) {
+    .sec-top-sec {
+        padding: 5px;
+        margin: 0;
+    }
+    .name-cores {
+        padding: 11px 7px 0 7px;
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 720px){
+    .sec-top-sec {
+        padding: 5px;
+        margin: 0;
+    }
+
+}
+@media only screen and (max-width: 960px) {
+    .sec-top-sec {
+        padding: 5px;
+        margin: 0;
+    }
+    .sec-top-sec1{
+        display: none;
+    }
+}
+@media only screen and (max-width: 1140px) {
+
+    .text-new-box {
+        position: relative;
+        margin-top: 0;
+        display: none;
+        left: auto;
+        font-size: 16px;
+        width: 32%;
+        top: -61px;
+    }
+    p.new-hii {
+        display: block;
+        text-align: center;
+    }
+}

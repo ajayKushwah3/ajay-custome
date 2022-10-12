@@ -1,0 +1,329 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>test</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.css">
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+<style type="text/css">
+
+ 
+</style>
+</head>
+
+<body>
+<section class="question-details ptb-50" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                        <div class="tabqution" id="qution1" style="display: block;">
+                            <div class="qution-box">
+                                <div class="top-hade">
+                                    <h6 class="name-titel"><span></span> What Can Zingtree Do for Your Business?</h6>
+                                </div>
+                                <div class="content-top">
+                                    <div class="image">
+                                        <img src="<?= base_url().'assets/user-assets'?>/img/icon/chemistry.png">
+                                    </div>
+                                    <div class="content-detial">
+                                        <p>This guide is built with Zingtree. Go ahead and drill down and see all the ways Zingtree can help your business save time and money.</p>
+                                    </div>
+                                </div>
+                                <div class="qution-box-sec qution-box-sec-01" id="div1">
+                                    <div class="top-hade">
+                                        <h6 class="name-titel"><i class="fa fa-question-circle mr-2" aria-hidden="true"></i> Choose an area to explore</h6>
+                                    </div>
+                                    <div class="box-sec-select">
+                                        <div class="box-select">
+                                                <div class="form-group">
+                                                    <label class="qutionno active" onclick="openQution(event, 'qution2')">
+                                                        <input type="radio" id="chb1" hide="div1" show="div2" name="box-1" value="box-01">
+                                                         01 Self-Help Troubleshooters for Customer Service
+                                                    </label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="qutionno" onclick="openQution(event, 'qution2')">
+                                                        <input type="radio" id="chb1" name="box-1" value="box-02" hide="div1" show="div2">
+                                                        02 Call Center Tools (Agent Scripting)
+                                                    </label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="qutionno" onclick="openQution(event, 'qution2')">
+                                                        <input type="radio" id="chb1" name="box-1" value="box-03" hide="div1" show="div2">
+                                                        03 Process Guides for Staff
+                                                    </label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="qutionno" onclick="openQution(event, 'qution2')">
+                                                        <input type="radio" id="chb1" name="box-1" value="box-04" hide="div1" show="div2">
+                                                        04None
+                                                    </label>
+                                                </div>
+                                                
+                                            </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tabqution" id="qution2">
+                            <div class="qution-box">
+                                <div class="top-hade">
+                                    <h6 class="name-titel"><span></span> Before submitting a ticket, give your customers the opportunity to self-solve issues</h6>
+                                </div>
+                                <div class="content-top">
+                                    <div class="image">
+                                        <img src="<?= base_url().'assets/user-assets'?>/img/icon/cardiology.png">
+                                    </div>
+                                    <div class="content-detial">
+                                        <p>Before submitting a ticket, give your customers the opportunity to self-solve issues by following your interactive troubleshooters. You'll see fewer support tickets versus traditional FAQs, and if a customer can't get an answer, your support tickets include a transcript of the session. This saves a LOT of back-and-forth gathering background information.</p>
+                                    </div>
+                                </div>
+                                <div class="qution-box-sec qution-box-sec-01" id="div1">
+                                    <div class="top-hade">
+                                        <h6 class="name-titel"><i class="fa fa-question-circle mr-2" aria-hidden="true"></i> Explore how with Zingtree, you can achieve the following:</h6>
+                                    </div>
+                                    <div class="box-sec-select">
+                                        <div class="box-select">
+                                                <div class="form-group">
+                                                    <label class="qutionno" onclick="openQution(event, 'qution3')">
+                                                        <input type="radio" id="chb1" hide="div1" show="div2" name="box-1" value="box-01">
+                                                        001 Self-Help Troubleshooters for Customer Service
+                                                    </label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="qutionno" onclick="openQution(event, 'qution3')">
+                                                        <input type="radio" id="chb1" name="box-1" value="box-02" hide="div1" show="div2">
+                                                        002 Call Center Tools (Agent Scripting)
+                                                    </label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="qutionno" onclick="openQution(event, 'qution3')">
+                                                        <input type="radio" id="chb1" name="box-1" value="box-03" hide="div1" show="div2">
+                                                        003 Process Guides for Staff
+                                                    </label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="qutionno" onclick="openQution(event, 'qution3')">
+                                                        <input type="radio" id="chb1" name="box-1" value="box-04" hide="div1" show="div2">
+                                                    004 None
+                                                    </label>
+                                                </div>
+                                                
+                                            </div>
+                                    </div>
+                                    <div class="back-btn d-felx">
+                                        <a href="javascript:void(0);" class="default-btn"onclick="openQution(event, 'qution1')" ><i class="fa fa-arrow-left mr-1"></i> Back</a>
+                                        <a href="javascript:void(0);" class="default-btn" onclick="openQution(event, 'qution1')"><i class="fa fa-refresh mr-1" aria-hidden="true"></i>  Restart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tabqution" id="qution3">
+                            <div class="qution-box">
+                                <div class="top-hade">
+                                    <h6 class="name-titel"><span></span> Give your customers the power of on-demand, interactive self-help.</h6>
+                                </div>
+                                <div class="content-top">
+                                    <div class="image">
+                                        <img src="<?= base_url().'assets/user-assets'?>/img/icon/neurology.png">
+                                    </div>
+                                    <div class="content-detial">
+                                        <p>Give your customers the power of on-demand, interactive self-help. Zingtree’s simple question and answer style format makes it really easy for customers to get solutions on their own.  </p>
+                                    </div>
+                                </div>
+                                <div class="qution-box-sec qution-box-sec-01" id="div1">
+                                    <div class="top-hade">
+                                        <h6 class="name-titel"><i class="fa fa-question-circle mr-2" aria-hidden="true"></i>  Happier Customers</h6>
+                                    </div>
+                                    <div class="box-sec-select">
+                                        <div class="box-select">
+                                                <div class="form-group">
+                                                    <label class="qutionno" onclick="openQution(event, 'qution4')">
+                                                        <input type="radio" id="chb1" hide="div1" show="div2" name="box-1" value="box-01">
+                                                        101 Self-Help Troubleshooters for Customer Service
+                                                    </label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="qutionno" onclick="openQution(event, 'qution4')">
+                                                        <input type="radio" id="chb1" name="box-1" value="box-02" hide="div1" show="div2">
+                                                        102 Call Center Tools (Agent Scripting)
+                                                    </label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="qutionno" onclick="openQution(event, 'qution4')">
+                                                        <input type="radio" id="chb1" name="box-1" value="box-03" hide="div1" show="div2">
+                                                        103 Process Guides for Staff
+                                                    </label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="qutionno" onclick="openQution(event, 'qution4')">
+                                                        <input type="radio" id="chb1" name="box-1" value="box-04" hide="div1" show="div2">
+                                                    104 None
+                                                    </label>
+                                                </div>
+                                                
+                                            </div>
+                                    </div>
+                                    <div class="back-btn d-felx">
+                                        <a href="javascript:void(0);" class="default-btn"onclick="openQution(event, 'qution2')" ><i class="fa fa-arrow-left mr-1"></i> Back</a>
+                                        <a href="javascript:void(0);" class="default-btn" onclick="openQution(event, 'qution1')"><i class="fa fa-refresh mr-1" aria-hidden="true"></i>  Restart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tabqution" id="qution4">
+                            <div class="qution-box">
+                                <div class="top-hade">
+                                    <h6 class="name-titel"><span></span> When customers can't self-solve a problem</h6>
+                                </div>
+                                <div class="content-top">
+                                    <div class="image">
+                                        <img src="<?= base_url().'assets/user-assets'?>/img/icon/oncology.png">
+                                    </div>
+                                    <div class="content-detial">
+                                        <p>When customers can't self-solve a problem, your help tickets (via email, chat, CRM or Help Desk) include all the questions and answers the customer provided while using Zingtree. What a huge time saver!</p>
+                                    </div>
+                                </div>
+                                <div class="qution-box-sec qution-box-sec-01" id="div1">
+                                    <div class="top-hade">
+                                        <h6 class="name-titel"><i class="fa fa-question-circle mr-2" aria-hidden="true"></i>  Smarter Support Reps</h6>
+                                    </div>
+                                    <div class="box-sec-select">
+                                        <div class="box-select">
+                                                <div class="form-group">
+                                                    <label class="qutionno" onclick="openQution(event, 'qution5')">
+                                                        <input type="radio" id="chb1" hide="div1" show="div2" name="box-1" value="box-01">
+                                                        201 Self-Help Troubleshooters for Customer Service
+                                                    </label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="qutionno" onclick="openQution(event, 'qution5')">
+                                                        <input type="radio" id="chb1" name="box-1" value="box-02" hide="div1" show="div2">
+                                                        202 Call Center Tools (Agent Scripting)
+                                                    </label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="qutionno" onclick="openQution(event, 'qution5')">
+                                                        <input type="radio" id="chb1" name="box-1" value="box-03" hide="div1" show="div2">
+                                                        203 Process Guides for Staff
+                                                    </label>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="qutionno" onclick="openQution(event, 'qution5')">
+                                                        <input type="radio" id="chb1" name="box-1" value="box-04" hide="div1" show="div2">
+                                                    204 None
+                                                    </label>
+                                                </div>
+                                                
+                                            </div>
+                                    </div>
+                                    <div class="back-btn d-felx">
+                                        <a href="javascript:void(0);" class="default-btn"onclick="openQution(event, 'qution3')" ><i class="fa fa-arrow-left mr-1"></i> Back</a>
+                                        <a href="javascript:void(0);" class="default-btn" onclick="openQution(event, 'qution1')"><i class="fa fa-refresh mr-1" aria-hidden="true"></i>  Restart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tabqution" id="qution5">
+                            <div class="qution-box">
+                                <div class="top-hade">
+                                    <h6 class="name-titel"><span></span> When customers can't self-solve a problem</h6>
+                                </div>
+                                <div class="content-top">
+                                    <div class="image">
+                                        <img src="<?= base_url().'assets/user-assets'?>/img/icon/lungs.png">
+                                    </div>
+                                    <div class="content-detial">
+                                        <p>When customers can't self-solve a problem, your help tickets (via email, chat, CRM or Help Desk) include all the questions and answers the customer provided while using Zingtree. What a huge time saver!</p>
+                                    </div>
+                                </div>
+                                <div class="qution-box-sec qution-box-sec-01" id="div1">
+                                    <div class="top-hade">
+                                        <h6 class="name-titel"><i class="fa fa-question-circle mr-2" aria-hidden="true"></i>  Informed Product Teams</h6>
+                                    </div>
+                                    <div class="box-sec-select">
+                                        <div class="box-select">
+                                                <div class="form-group">
+                                                        <label class="qutionno" onClick="location.href='<?= base_url()?>'">
+                                                        <input type="radio" id="chb1" hide="div1" show="div2" name="box-1" value="box-01">
+                                                         Get Started!
+                                                    </label>
+                                                </div>
+                                                
+                                                
+                                            </div>
+                                    </div>
+                                    <div class="back-btn d-felx">
+                                        <a href="javascript:void(0);" class="default-btn"onclick="openQution(event, 'qution4')" ><i class="fa fa-arrow-left mr-1"></i> Back</a>
+                                        <a href="javascript:void(0);" class="default-btn" onclick="openQution(event, 'qution1')"><i class="fa fa-refresh mr-1" aria-hidden="true"></i>  Restart</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                        <div class="right-content">
+                            <h3>Easily publish your own scripts, troubleshooters, and process guides.</h3>
+                            <p>Guide your agents and customers through complex, changing, or high-consequence processes – with minimal IT work.</p>
+                            <div class="news-content-3">
+                            <h3>Some of our other treatments</h3>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo.</p>
+
+                            <ul>
+                                <li>
+                                    <i class="bx bx-check"></i>
+                                    White fillings
+                                </li>
+                                <li>
+                                    <i class="bx bx-check"></i>
+                                    Emergency dental treatment
+                                </li>
+                                <li>
+                                    <i class="bx bx-check"></i>
+                                    Crowns &amp; bridges
+                                </li>
+                                <li>
+                                    <i class="bx bx-check"></i>
+                                    Conscious sedation
+                                </li>
+                                <li>
+                                    <i class="bx bx-check"></i>
+                                    Air polish
+                                </li>
+                            </ul>
+                        </div>
+                            <p class="mt-3"><a href="javascript:void(0);" class="default-btn">Request a Demo</a></p>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </section>
+</body>
+<script>
+    function openQution(evt, qutionName) {
+          var i, tabqution, qutionno;
+          tabqution = document.getElementsByClassName("tabqution");
+          for (i = 0; i < tabqution.length; i++) {
+            tabqution[i].style.display = "none";
+          }
+          qutionno = document.getElementsByClassName("qutionno");
+          for (i = 0; i < qutionno.length; i++) {
+            qutionno[i].className = qutionno[i].className.replace(" active", "");
+          }
+          document.getElementById(qutionName).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+</script>
+</html>

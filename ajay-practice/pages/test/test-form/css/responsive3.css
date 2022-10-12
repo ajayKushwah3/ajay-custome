@@ -1,0 +1,115 @@
+@media only screen and (max-width: 576px) {
+    .pepper-time b {
+        display: none;
+    }
+    .book-mark b {
+        display: none;
+    }
+    .pepaer-1 {
+        font-size: 12px;
+        font-size: 12px;
+        padding: 12px 10px 12px 10px;
+    }
+    .model-butan-in {
+        text-align: right;
+        padding: 20px 0 0 0;
+    }
+    .pepper-time {
+        font-size: 12px;
+    }
+    .name-cor {
+        font-size: 12px;
+    }
+    .book-mark {
+        font-size: 12px;
+    }
+    .ans-all b {
+        display: none;
+    }
+    .ans-all i {
+        display: block;
+    }
+    .ans-all {
+        display: -webkit-box;
+        line-height: 12px;
+        padding: 6px 0;
+    }
+    .anser-chak {
+        margin: 10px 10px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .pepper-time b {
+        display: none;
+    }
+
+    .ans-all b {
+        display: none;
+    }
+    .ans-all i {
+        display: block;
+    }
+    .ans-all {
+        display: -webkit-box;
+        line-height: 12px;
+        padding: 6px 0;
+    }
+    .sectione-2 {
+        background: #fff;
+        display: none;
+        width: 260px;
+        float: right;
+    }
+    .revewis {
+        margin: 20px 0;
+    }
+    .new-animat-class {
+        position: fixed;
+        z-index: 99;
+        bottom: 13%;
+    }
+    ul.box-all-co {
+        height: 190px;
+        overflow-y: scroll;
+    }
+    .solubtn {
+        position: fixed;
+        background: #1f4661;
+        color: #fff;
+        right: 6%;
+        padding: 9px 10px 6px 10px;
+        bottom: 4%;
+        border-radius: 50px;
+        line-height: 22px;
+        display: block;
+    }
+    .solubtn12 {
+        display: none;
+    }
+}
+@media only screen and (max-width: 959px) {
+    
+    .pepper-time b {
+        display: none;
+    }
+    .book-mark {
+        font-size: 14px;
+    }
+    .ans-all b {
+        display: none;
+    }
+    .ans-all i {
+        display: block;
+    }
+    .ans-all {
+        display: -webkit-box;
+        line-height: 12px;
+        padding: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+}
+

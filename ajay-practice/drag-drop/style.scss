@@ -1,0 +1,479 @@
+        $b: #000;
+        $w: #fff;
+        .facet-container1 {
+            display: inline-flex;
+            padding: 20px;
+            .ui-sortable-placeholder {
+                background-color: #00000045;
+                padding: 0 125px;
+                border-radius: 10px;
+                border: unset;
+                box-shadow: inset 0 0 15px 0 #ddd;
+            }
+            .box-a1 {
+                border-radius: 10px;
+                overflow: hidden;
+                width: 250px;
+                margin-left: 10px;
+                .add-more {
+                    background: #000;
+                    width: 100%;
+                    display: block;
+                    text-decoration: none;
+                    padding: 10px;
+                    color: #fff;
+                    font-weight: 600;
+                    border-radius: 0;
+                }
+            }
+            .facet-container {
+                display: inline-flex;
+                .box-a {
+                    margin: 0 10px;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    width: 250px;
+                    label {
+                        display: block;
+                        text-align: center;
+                        background: #000;
+                        margin-bottom: 0;
+                        padding: 10px;
+                        color: #fff;
+                        font-weight: 600;
+                    }
+                    .add-more {
+                        background: #000;
+                        width: 100%;
+                        display: block;
+                        text-decoration: none;
+                        padding: 10px;
+                        color: #fff;
+                        font-weight: 600;
+                        border-radius: 0;
+                    }
+                    .min-box {
+                        background: #eee;
+                        padding-bottom: 5px;
+                        border-radius: 0 0 10px 10px;
+                        textarea {
+                            width: 100%;
+                            margin: 6px 0;
+                            border: 1px solid #bbb;
+                        }
+                        .btn-teg-l {
+                            color: $b;
+                            display: block;
+                            padding: 5px 3px;
+                            margin: 0 10px;
+                            transition: .5s;
+                            font-size: 14px;
+                            font-weight: bold;
+                            &.active {
+                                display: none;
+                            }
+                            &:hover {
+                                transition: .5s;
+                                background: $w;
+                                text-decoration: none;
+                            }
+                        }
+                        .box-as {
+                            padding: 0 10px 15px;
+                            display: none;
+                            &.active {
+                                display: block;
+                            }
+                            .clear {
+                                color: $b;
+                                &:hover {
+                                    opacity: .7;
+                                }
+                            }
+                        }
+                    }
+                    .facet-list {
+                        list-style-type: none;
+                        margin: 0;
+                        padding: 3px 10px 0;
+                        min-height: 1.5em;
+                        font-size: 0.85em;
+                        li {
+                            margin: 3px 0;
+                            padding: 5px;
+                            font-size: 14px;
+                            font-weight: 600;
+                            transition: .5s;
+                            display: flex;
+                            justify-content: space-between;
+                            transition: .5s;
+                            position: relative;
+                            &:hover {
+                                background-color: $w;
+                                transition: .5s;
+                                i {
+                                    opacity: 1;
+                                }
+                            }
+                            i {
+                                cursor: pointer;
+                                opacity: .0;
+                                position: absolute;
+                                right: 0;
+                                padding: 9px 7px;
+                                top: 0;
+                            }
+                            &:hover {
+                                transition: .5s;
+                                border: 1px solid $b;
+                            }
+                            &:first-child {
+                                margin-top: 0;
+                            }
+                            .placeholder {
+                                height: 1.2em
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        .min-acti-box-right {
+            transition: .5s;
+            transform: translateX(100%);
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: #0000008f;
+            opacity: 0;
+            visibility: hidden;
+            &.active {
+                opacity: 1;
+                visibility: visible;
+                transition: .5s;
+                transform: translateX(0);
+                .ro-m-box-a {
+                    transition: .5s;
+                }
+            }
+            .ro-m-box-a {
+                max-width: 50%;
+                width: 100%;
+                background: $w;
+                display: block;
+                margin-left: auto;
+                position: relative;
+                height: 100%;
+                padding: 20px;
+                transition: .5s;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                padding-top: 55px;
+                .v-boed {
+                    max-width: 100%;
+                    position: absolute;
+                    width: 100%;
+                    background: #edf2f4;
+                    left: 0;
+                    top: 0;
+                    .klist {
+                        display: flex;
+                        margin-bottom: 0;
+                        padding: 5px;
+                        justify-content: space-between;
+                        .left {
+                            .link-k a {
+                                display: flex;
+                                gap: 10px;
+                                width: fit-content;
+                                padding: 4px 11px;
+                                align-items: center;
+                                color: #fff;
+                                background: #000000;
+                                box-shadow: inset 0 0 5px 0 #000000, inset 0 0 10px 0 #d0d0d0;
+                                border-radius: 5px;
+                                transition: .5s;
+                                text-decoration: none;
+                                &:hover {
+                                    transition: .5s;
+                                    box-shadow: inset 0 0 5px 0 #00000000, inset 0 0 10px 0 #000000, 0 0 5px 0 #0000006b;
+                                }
+                            }
+                        }
+                        .link-k {
+                            list-style: none;
+                            &:last-child {
+                                width: 30px;
+                            }
+                            .ri-hon-hg {
+                                display: block;
+                                padding: 5px 7px;
+                                transition: .5s;
+                                // background-color: $w;
+                                &:hover {
+                                    background-color: #ebebeb;
+                                    box-shadow: inset 0 0 10px 0 #cddce3;
+                                }
+                            }
+                        }
+                    }
+                }
+                .rigth-box {
+                    position: absolute;
+                    max-width: 180px;
+                    width: 100%;
+                    right: 0;
+                    width: 100%;
+                    transform: translateX(127px);
+                    height: 100%;
+                    background: #edf2f4;
+                    top: 44px;
+                    border-left: 1px solid #edf2f4;
+                    transition: .5s;
+                    &:hover {
+                        transition: .5s;
+                        box-shadow: 0px 10px 15px 0 #999;
+                        transform: translateX(0px);
+                    }
+                    .list-box {
+                        padding-left: 0;
+                        margin-bottom: 0;
+                        .list-y {
+                            border-bottom: 1px solid #fff;
+                            list-style: none;
+                            a {
+                                padding: 15px;
+                                font-size: 14px;
+                                display: flex;
+                                text-decoration: none;
+                                color: $b;
+                                gap: 15px;
+                                transform: translateX(0px);
+                                position: relative;
+                                transition: .5s;
+                                border-left: 3px solid #0000;
+                                &.active,
+                                &:hover {
+                                    transition: .5s;
+                                    gap: 32px;
+                                    background: #edf2f4;
+                                    transform: translateX(-15px);
+                                    border-left: 3px solid $b;
+                                }
+                                i {
+                                    font-size: 18px;
+                                    width: 25px;
+                                    text-align: center;
+                                    align-self: center;
+                                }
+                                span {
+                                    display: block;
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+                .left-box {
+                    position: relative;
+                    width: 100%;
+                    padding-right: 50px;
+                    overflow-y: scroll;
+                    max-height: 90vh;
+                    .note-modal-content {
+                        border: 0;
+                    }
+                    .note-modal-body {
+                        padding: 15px;
+                        input[type="checkbox"] {
+                            width: 16px;
+                            height: 16px;
+                            margin-right: 10px;
+                        }
+                        input[type="file"]:before {
+                            content: "Choosw Files";
+                            position: absolute;
+                            background: #000;
+                            padding: 5px;
+                            color: #fff;
+                            font-weight: 600;
+                            font-size: 13px;
+                        }
+                        .note-form-group {
+                            padding-bottom: 0;
+                        }
+                        .note-input {
+                            height: 45px;
+                            border: 1px solid #ddd;
+                            border-radius: 0;
+                            &:focus {
+                                border: 1px solid #000;
+                                outline: 0;
+                                box-shadow: unset;
+                            }
+                        }
+                    }
+                    .note-modal-footer {
+                        height: 57px;
+                        padding: 10px 15px;
+                        .note-btn-primary {
+                            background: #000 !important;
+                            opacity: 1 !important;
+                            border: 0;
+                            border-radius: 0;
+                            height: 40px;
+                            position: relative;
+                            top: -8px;
+                        }
+                    }
+                    .note-modal-header {
+                        padding: 5px 8px 7px;
+                        background: $b;
+                        color: $w;
+                        border: 0;
+                        .note-modal-title {
+                            color: $w;
+                            font-size: 16px;
+                        }
+                        button.close {
+                            opacity: 1;
+                            color: #fff;
+                            font-size: 16px;
+                            position: relative;
+                            top: 4px;
+                        }
+                    }
+                    .text-aria {
+                        position: absolute;
+                        bottom: 0;
+                        max-width: 94%;
+                        width: 100%;
+                        height: 50%;
+                        .form-summerontal {
+                            position: absolute;
+                            width: 100%;
+                            bottom: 0;
+                        }
+                        .show-box-ai {
+                            .list-bo {
+                                padding-left: 0;
+                                .min-v-list {
+                                    list-style: none;
+                                    display: flex;
+                                    gap: 15px;
+                                    position: relative;
+                                    &+.min-v-list {
+                                        &:before {
+                                            content: " ";
+                                            background: #777;
+                                            width: 80%;
+                                            left: 10%;
+                                            position: absolute;
+                                            bottom: 0;
+                                        }
+                                    }
+                                    .image {
+                                        text-align: center;
+                                        h6 {
+                                            width: 35px;
+                                            background: $b;
+                                            color: $w;
+                                            height: 35px;
+                                            border-radius: 50%;
+                                            margin-bottom: 0;
+                                            font-size: 14px;
+                                            line-height: 34px;
+                                        }
+                                    }
+                                    .content-r {
+                                        .name-box {
+                                            .name-m {
+                                                padding-top: 0;
+                                                margin-bottom: 0px;
+                                                font-size: 14px
+                                            }
+                                            small {
+                                                opacity: .7;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .btn-theme-1 {
+                            position: absolute;
+                            bottom: 5px;
+                            border: 0;
+                            background: $b;
+                            color: $w;
+                            padding: 6px 15px;
+                            font-size: 14px;
+                            left: 5px;
+                            height: 32px;
+                        }
+                        .note-frame {
+                            border-radius: 0;
+                            .note-toolbar {
+                                position: absolute;
+                                bottom: -1px;
+                                border-radius: 0;
+                                width: 100%;
+                                background: #edf2f4;
+                                display: flex;
+                                justify-content: end;
+                                .note-btn-group {
+                                    button {
+                                        background: #edf2f4;
+                                        border: 0;
+                                    }
+                                }
+                            }
+                        }
+                        .note-editor .note-editing-area {
+                            position: relative;
+                            margin-bottom: 35px;
+                        }
+                    }
+                }
+            }
+        }
+        
+        .note-modal.open {
+            background: #00000087;
+        }
+        
+        .note-modal-backdrop {
+            display: none !important;
+        }
+        
+        .btn-theme {
+            background-color: $b;
+            border: 0;
+            color: $w;
+            padding: 5px 10px;
+            font-weight: 600;
+            transition: .5s;
+            &:hover {
+                transition: .5s;
+                background-color: #0000009e;
+            }
+        }
+        
+        p {
+            clear: both;
+            padding-top: 1em;
+        }
+        
+        .facet {
+            border: 1px solid #bbb;
+            background-color: #fafafa;
+            cursor: move;
+        }
+        
+        .facet.ui-sortable-helper {
+            opacity: 0.5;
+        }

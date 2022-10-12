@@ -1,0 +1,877 @@
+    .testimonials-section {
+        padding: 50px 0;
+        .testimonials-box {
+            background: #fff;
+            box-shadow: 0 0 15px 0 #bbb;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            margin-top: 35%;
+            .image-about {
+                position: relative;
+                top: -80px;
+                width: 125px;
+                margin: 0 auto;
+                border-radius: 50%;
+                height: 125px;
+                box-shadow: 0 0 5px 0 #bbb;
+                background: #fff;
+                margin-bottom: -75px;
+                img.image2 {
+                    width: 100%;
+                    padding: 5px;
+                }
+            }
+            .content {
+                h5 {
+                    font-weight: 600;
+                    font-size: 16px;
+                }
+                p {
+                    font-weight: 400;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+    
+    .Services_page {
+        padding: 50px 0;
+        .Services-box {
+            padding: 20px;
+            border-radius: 5px;
+            transition: .3s;
+            &:hover {
+                transition: .3s;
+                box-shadow: 0 0 5px 0 #bbb;
+                .image-about {
+                    width: 80px;
+                    height: 80px;
+                    box-shadow: 0 0 5px 0 #bbb;
+                    background: #000;
+                    transition: .3s;
+                    border-radius: 50%;
+                    margin: 0 auto;
+                    img.image2 {
+                        width: 100%;
+                        transition: .3s;
+                    }
+                }
+                .content {
+                    h5 {
+                        transition: .3s;
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: #bbb;
+                    }
+                    p {
+                        transition: .3s;
+                        font-size: 14px;
+                    }
+                }
+            }
+            text-align: center;
+            .image-about {
+                width: 80px;
+                height: 80px;
+                box-shadow: 0 0 5px 0 #bbb;
+                background: #fff;
+                border-radius: 50%;
+                margin: 0 auto;
+                transition: .3s;
+                img.image2 {
+                    transition: .3s;
+                    width: 100%;
+                }
+            }
+            .content {
+                h5 {
+                    transition: .3s;
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+                p {
+                    transition: .3s;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    
+    // ----------------------------------------Payment------------------
+    .Payment-section {
+        background-color: #fecdc9;
+        padding: 50px 0;
+        height: 100vh;
+        .btn-th {
+            background-color: #fecdc9;
+            color: #a12d29;
+            padding: 8px 35px;
+            border: 1px solid #a12d29;
+            border-radius: 50px;
+            transition: .3s;
+        }
+        .btn-th:hover {
+            background-color: #a12d29;
+            color: #fecdc9;
+            border: 1px solid #a12d29;
+            padding: 8px 35px;
+            transition: .3s;
+            border-radius: 50px;
+        }
+        .Payment-box {
+            box-shadow: 0 0 15px 0 #bbb;
+            padding: 30px;
+            border-radius: 5px;
+            background-color: #fff;
+            .custom-form {
+                font-weight: 400;
+                font-size: 16px;
+                border-radius: 4px;
+                .btn-primary {
+                    background-color: #a12d29;
+                    border-color: #a12d29;
+                }
+                .form-group {
+                    position: relative;
+                    padding-top: 16px;
+                    margin-bottom: 16px;
+                    .animated-label {
+                        position: absolute;
+                        top: 20px;
+                        left: 0;
+                        bottom: 0;
+                        z-index: 2;
+                        width: 100%;
+                        font-weight: 600;
+                        opacity: 0.5;
+                        cursor: text;
+                        transition: 0.2s ease all;
+                        margin: 0;
+                        -webkit-user-select: none;
+                        -moz-user-select: none;
+                        user-select: none;
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            bottom: 0;
+                            left: 45%;
+                            height: 2px;
+                            width: 10px;
+                            visibility: hidden;
+                            background-color: #a12d29;
+                            transition: 0.2s ease all;
+                        }
+                    }
+                    &.not-empty {
+                        .animated-label {
+                            top: 0;
+                            font-size: 12px;
+                        }
+                    }
+                    .form-control {
+                        position: relative;
+                        z-index: 1;
+                        background-color: #0000;
+                        border-radius: 0;
+                        border-width: 0 0 1px;
+                        border-bottom-color: rgba(0, 0, 0, 0.25);
+                        height: auto;
+                        padding: 3px 0 5px;
+                        &:focus {
+                            box-shadow: none;
+                            border-bottom-color: rgba(0, 0, 0, 0.12);
+                            ~.animated-label {
+                                top: 0;
+                                opacity: 1;
+                                color: #a12d29;
+                                font-size: 12px;
+                                &:after {
+                                    visibility: visible;
+                                    width: 100%;
+                                    left: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    // -----------------forms-------
+    $F-c-color-o:#fd6606;
+    $F-c-color-w:#fff;
+    $F-c-color-w-bg:#fcf9f4;
+    $F-c-color-b:#9500f7;
+    $F-c-color-p:#fe1554;
+    $F-c-color-f-bg:#292929;
+    .forms {
+        padding: 80px 0;
+        &.login {
+            .login-form {
+                box-shadow: 0 0 5px 0 #bbb;
+                display: grid;
+                grid-template-columns: 50% 50%;
+                .left {
+                    text-align: center;
+                    padding: 20px;
+                }
+                .right {
+                    h1 {
+                        font-family: "Adigiana_Ultra";
+                        color: $F-c-color-o;
+                        font-weight: 100;
+                        margin-bottom: 20px;
+                        text-align: center;
+                        font-size: 55px;
+                        line-height: 55px;
+                    }
+                    padding: 30px 50px;
+                    p {
+                        color: $F-c-color-f-bg;
+                        text-align: center;
+                        a {
+                            color: $F-c-color-o;
+                            transition: .3s;
+                            font-weight: 900;
+                            border-bottom: 1px solid $F-c-color-o;
+                            &:hover {
+                                color: $F-c-color-o;
+                                border-bottom: 1px solid $F-c-color-o;
+                                transition: .3s;
+                            }
+                        }
+                    }
+                    button {
+                        width: 100%;
+                    }
+                    .form-group {
+                        margin-bottom: 20px;
+                        position: relative;
+                        .toggle-password {
+                            position: absolute;
+                            right: 3px;
+                            top: 12px;
+                            color: $F-c-color-o;
+                        }
+                        textarea,
+                        input {
+                            height: 40px;
+                            border-bottom: 1px solid $F-c-color-f-bg;
+                            border-top: 0;
+                            border-left: 0;
+                            font-size: 15px;
+                            color: $F-c-color-o;
+                            border-right: 0;
+                            padding: 0;
+                            &::placeholder {
+                                color: $F-c-color-f-bg;
+                            }
+                        }
+                    }
+                    .Forgot-Password {
+                        margin: 15px 0 30px;
+                        a {
+                            float: right;
+                            transition: .3s;
+                            font-size: 15px;
+                            color: $F-c-color-f-bg;
+                            &:hover {
+                                color: $F-c-color-o;
+                                transition: .3s;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.forgot-password {
+            .forgot-password-form {
+                box-shadow: 0 0 5px 0 #bbb;
+                display: grid;
+                grid-template-columns: 50% 50%;
+                .left {
+                    text-align: center;
+                    padding: 20px;
+                }
+                .right {
+                    padding: 25% 50px 30px;
+                    h1 {
+                        font-family: "Adigiana_Ultra";
+                        color: $F-c-color-o;
+                        font-weight: 100;
+                        margin-bottom: 20px;
+                        text-align: center;
+                        font-size: 43px;
+                        line-height: 55px;
+                    }
+                    p {
+                        color: $F-c-color-f-bg;
+                        text-align: center;
+                        a {
+                            color: $F-c-color-o;
+                            transition: .3s;
+                            font-weight: 900;
+                            border-bottom: 1px solid $F-c-color-o;
+                            &:hover {
+                                color: $F-c-color-o;
+                                border-bottom: 1px solid $F-c-color-o;
+                                transition: .3s;
+                            }
+                        }
+                    }
+                    button {
+                        width: 100%;
+                    }
+                    .form-group {
+                        margin-bottom: 20px;
+                        input {
+                            height: 40px;
+                            border-bottom: 1px solid $F-c-color-f-bg;
+                            border-top: 0;
+                            border-left: 0;
+                            font-size: 15px;
+                            color: $F-c-color-o;
+                            border-right: 0;
+                            padding: 0;
+                            &::placeholder {
+                                color: $F-c-color-f-bg;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.otp {
+            .otp-form {
+                box-shadow: 0 0 5px 0 #bbb;
+                display: grid;
+                grid-template-columns: 50% 50%;
+                .left {
+                    text-align: center;
+                    padding: 20px;
+                }
+                .right {
+                    padding: 25% 50px 30px;
+                    h1 {
+                        font-family: "Adigiana_Ultra";
+                        color: $F-c-color-o;
+                        font-weight: 100;
+                        margin-bottom: 20px;
+                        text-align: center;
+                        font-size: 55px;
+                        line-height: 55px;
+                    }
+                    p {
+                        color: $F-c-color-f-bg;
+                        text-align: center;
+                        a {
+                            color: $F-c-color-o;
+                            transition: .3s;
+                            font-weight: 900;
+                            border-bottom: 1px solid $F-c-color-o;
+                            &:hover {
+                                color: $F-c-color-o;
+                                border-bottom: 1px solid $F-c-color-o;
+                                transition: .3s;
+                            }
+                        }
+                    }
+                    button {
+                        width: 100%;
+                    }
+                    .form-group {
+                        margin-bottom: 20px;
+                        input {
+                            height: 40px;
+                            border-bottom: 1px solid $F-c-color-f-bg;
+                            border-top: 0;
+                            border-left: 0;
+                            font-size: 15px;
+                            color: $F-c-color-o;
+                            border-right: 0;
+                            padding: 0;
+                            &::placeholder {
+                                color: $F-c-color-f-bg;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.reset-password {
+            .reset-password-form {
+                box-shadow: 0 0 5px 0 #bbb;
+                display: grid;
+                grid-template-columns: 50% 50%;
+                .left {
+                    text-align: center;
+                    padding: 20px;
+                }
+                .right {
+                    padding: 20% 50px 30px;
+                    h1 {
+                        font-family: "Adigiana_Ultra";
+                        color: $F-c-color-o;
+                        font-weight: 100;
+                        margin-bottom: 20px;
+                        text-align: center;
+                        font-size: 43px;
+                        line-height: 55px;
+                    }
+                    p {
+                        color: $F-c-color-f-bg;
+                        text-align: center;
+                        a {
+                            color: $F-c-color-o;
+                            transition: .3s;
+                            font-weight: 900;
+                            border-bottom: 1px solid $F-c-color-o;
+                            &:hover {
+                                color: $F-c-color-o;
+                                border-bottom: 1px solid $F-c-color-o;
+                                transition: .3s;
+                            }
+                        }
+                    }
+                    button {
+                        width: 100%;
+                    }
+                    .form-group {
+                        margin-bottom: 20px;
+                        position: relative;
+                        .toggle-password {
+                            position: absolute;
+                            right: 3px;
+                            top: 12px;
+                            color: $F-c-color-o;
+                        }
+                        input {
+                            height: 40px;
+                            border-bottom: 1px solid $F-c-color-f-bg;
+                            border-top: 0;
+                            border-left: 0;
+                            font-size: 15px;
+                            color: $F-c-color-o;
+                            border-right: 0;
+                            padding: 0;
+                            &::placeholder {
+                                color: $F-c-color-f-bg;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.sign-up {
+            .sign-up-form {
+                box-shadow: 0 0 5px 0 #bbb;
+                display: grid;
+                grid-template-columns: 100%;
+                .right {
+                    h1 {
+                        font-family: "Adigiana_Ultra";
+                        color: $F-c-color-o;
+                        font-weight: 100;
+                        margin-bottom: 20px;
+                        text-align: center;
+                        font-size: 55px;
+                        line-height: 55px;
+                    }
+                    padding: 30px 50px;
+                    p {
+                        color: $F-c-color-f-bg;
+                        text-align: center;
+                        a {
+                            color: $F-c-color-o;
+                            transition: .3s;
+                            font-weight: 900;
+                            border-bottom: 1px solid $F-c-color-o;
+                            &:hover {
+                                color: $F-c-color-o;
+                                border-bottom: 1px solid $F-c-color-o;
+                                transition: .3s;
+                            }
+                        }
+                    }
+                    button {
+                        width: 100%;
+                    }
+                    .form-group {
+                        margin-bottom: 20px;
+                        position: relative;
+                        .toggle-password {
+                            position: absolute;
+                            right: 3px;
+                            top: 12px;
+                            color: $F-c-color-o;
+                        }
+                        textarea,
+                        input {
+                            height: 40px;
+                            border-bottom: 1px solid $F-c-color-f-bg;
+                            border-top: 0;
+                            border-left: 0;
+                            font-size: 15px;
+                            color: $F-c-color-o;
+                            border-right: 0;
+                            padding: 0;
+                            &::placeholder {
+                                color: $F-c-color-f-bg;
+                            }
+                        }
+                    }
+                    .Forgot-Password {
+                        margin: 15px 0 30px;
+                        a {
+                            float: right;
+                            transition: .3s;
+                            font-size: 15px;
+                            color: $F-c-color-f-bg;
+                            &:hover {
+                                color: $F-c-color-o;
+                                transition: .3s;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .forms2 {
+        $Ph-color-1: #ffa21a;
+        $Ph-color-2: #4b4d4c;
+        $Ph-color-3: #ffe7d2;
+        padding: 125px 0;
+        background-image: url('../img/pathsala/home_page/img_header_back.jpg');
+        &.login {
+            .login-form {
+                box-shadow: 0 0 5px 0 #bbb;
+                .left {
+                    text-align: center;
+                    padding: 20px;
+                }
+                .right {
+                    h1 {
+                        font-family: "Adigiana_Ultra";
+                        color: $Ph-color-1;
+                        font-weight: 100;
+                        margin-bottom: 20px;
+                        text-align: center;
+                        font-size: 55px;
+                        line-height: 55px;
+                    }
+                    padding: 30px 50px;
+                    p {
+                        color: #000;
+                        text-align: center;
+                        a {
+                            color: $Ph-color-1;
+                            transition: .3s;
+                            font-weight: 900;
+                            border-bottom: 1px solid $Ph-color-1;
+                            &:hover {
+                                color: #000;
+                                border-bottom: 1px solid #000;
+                                transition: .3s;
+                            }
+                        }
+                    }
+                    button {
+                        width: 100%;
+                    }
+                    .form-group {
+                        margin-bottom: 20px;
+                        position: relative;
+                        .toggle-password {
+                            position: absolute;
+                            right: 3px;
+                            top: 12px;
+                            color: $Ph-color-1;
+                        }
+                        textarea,
+                        input {
+                            height: 40px;
+                            border-bottom: 1px solid #000;
+                            border-top: 0;
+                            border-left: 0;
+                            font-size: 15px;
+                            color: #000;
+                            border-right: 0;
+                            padding: 0;
+                            &::placeholder {
+                                color: #000;
+                            }
+                        }
+                    }
+                    .Forgot-Password {
+                        margin: 15px 0 30px;
+                        a {
+                            float: right;
+                            transition: .3s;
+                            font-size: 15px;
+                            color: $Ph-color-2;
+                            &:hover {
+                                color: #000;
+                                transition: .3s;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // &.forgot-password {
+        //     .forgot-password-form {
+        //         box-shadow: 0 0 5px 0 #bbb;
+        //         display: grid;
+        //         grid-template-columns: 50% 50%;
+        //         .left {
+        //             text-align: center;
+        //             padding: 20px;
+        //         }
+        //         .right {
+        //             padding: 25% 50px 30px;
+        //             h1 {
+        //                 font-family: "Adigiana_Ultra";
+        //                 color: $color-b;
+        //                 font-weight: 100;
+        //                 margin-bottom: 20px;
+        //                 text-align: center;
+        //                 font-size: 43px;
+        //                 line-height: 55px;
+        //             }
+        //             p {
+        //                 color: $color-f-bg;
+        //                 text-align: center;
+        //                 a {
+        //                     color: $color-b;
+        //                     transition: .3s;
+        //                     font-weight: 900;
+        //                     border-bottom: 1px solid $color-b;
+        //                     &:hover {
+        //                         color: $color-o;
+        //                         border-bottom: 1px solid $color-o;
+        //                         transition: .3s;
+        //                     }
+        //                 }
+        //             }
+        //             button {
+        //                 width: 100%;
+        //             }
+        //             .form-group {
+        //                 margin-bottom: 20px;
+        //                 input {
+        //                     height: 40px;
+        //                     border-bottom: 1px solid $color-f-bg;
+        //                     border-top: 0;
+        //                     border-left: 0;
+        //                     font-size: 15px;
+        //                     color: $color-b;
+        //                     border-right: 0;
+        //                     padding: 0;
+        //                     &::placeholder {
+        //                         color: $color-f-bg;
+        //                     }
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
+        // &.otp {
+        //     .otp-form {
+        //         box-shadow: 0 0 5px 0 #bbb;
+        //         display: grid;
+        //         grid-template-columns: 50% 50%;
+        //         .left {
+        //             text-align: center;
+        //             padding: 20px;
+        //         }
+        //         .right {
+        //             padding: 25% 50px 30px;
+        //             h1 {
+        //                 font-family: "Adigiana_Ultra";
+        //                 color: $color-b;
+        //                 font-weight: 100;
+        //                 margin-bottom: 20px;
+        //                 text-align: center;
+        //                 font-size: 55px;
+        //                 line-height: 55px;
+        //             }
+        //             p {
+        //                 color: $color-f-bg;
+        //                 text-align: center;
+        //                 a {
+        //                     color: $color-b;
+        //                     transition: .3s;
+        //                     font-weight: 900;
+        //                     border-bottom: 1px solid $color-b;
+        //                     &:hover {
+        //                         color: $color-o;
+        //                         border-bottom: 1px solid $color-o;
+        //                         transition: .3s;
+        //                     }
+        //                 }
+        //             }
+        //             button {
+        //                 width: 100%;
+        //             }
+        //             .form-group {
+        //                 margin-bottom: 20px;
+        //                 input {
+        //                     height: 40px;
+        //                     border-bottom: 1px solid $color-f-bg;
+        //                     border-top: 0;
+        //                     border-left: 0;
+        //                     font-size: 15px;
+        //                     color: $color-b;
+        //                     border-right: 0;
+        //                     padding: 0;
+        //                     &::placeholder {
+        //                         color: $color-f-bg;
+        //                     }
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
+        // &.reset-password {
+        //     .reset-password-form {
+        //         box-shadow: 0 0 5px 0 #bbb;
+        //         display: grid;
+        //         grid-template-columns: 50% 50%;
+        //         .left {
+        //             text-align: center;
+        //             padding: 20px;
+        //         }
+        //         .right {
+        //             padding: 20% 50px 30px;
+        //             h1 {
+        //                 font-family: "Adigiana_Ultra";
+        //                 color: $color-b;
+        //                 font-weight: 100;
+        //                 margin-bottom: 20px;
+        //                 text-align: center;
+        //                 font-size: 43px;
+        //                 line-height: 55px;
+        //             }
+        //             p {
+        //                 color: $color-f-bg;
+        //                 text-align: center;
+        //                 a {
+        //                     color: $color-b;
+        //                     transition: .3s;
+        //                     font-weight: 900;
+        //                     border-bottom: 1px solid $color-b;
+        //                     &:hover {
+        //                         color: $color-o;
+        //                         border-bottom: 1px solid $color-o;
+        //                         transition: .3s;
+        //                     }
+        //                 }
+        //             }
+        //             button {
+        //                 width: 100%;
+        //             }
+        //             .form-group {
+        //                 margin-bottom: 20px;
+        //                 position: relative;
+        //                 .toggle-password {
+        //                     position: absolute;
+        //                     right: 3px;
+        //                     top: 12px;
+        //                     color: $color-b;
+        //                 }
+        //                 input {
+        //                     height: 40px;
+        //                     border-bottom: 1px solid $color-f-bg;
+        //                     border-top: 0;
+        //                     border-left: 0;
+        //                     font-size: 15px;
+        //                     color: $color-b;
+        //                     border-right: 0;
+        //                     padding: 0;
+        //                     &::placeholder {
+        //                         color: $color-f-bg;
+        //                     }
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
+        // &.sign-up {
+        //     .sign-up-form {
+        //         box-shadow: 0 0 5px 0 #bbb;
+        //         display: grid;
+        //         grid-template-columns: 100%;
+        //         .right {
+        //             h1 {
+        //                 font-family: "Adigiana_Ultra";
+        //                 color: $color-b;
+        //                 font-weight: 100;
+        //                 margin-bottom: 20px;
+        //                 text-align: center;
+        //                 font-size: 55px;
+        //                 line-height: 55px;
+        //             }
+        //             padding: 30px 50px;
+        //             p {
+        //                 color: $color-f-bg;
+        //                 text-align: center;
+        //                 a {
+        //                     color: $color-b;
+        //                     transition: .3s;
+        //                     font-weight: 900;
+        //                     border-bottom: 1px solid $color-b;
+        //                     &:hover {
+        //                         color: $color-o;
+        //                         border-bottom: 1px solid $color-o;
+        //                         transition: .3s;
+        //                     }
+        //                 }
+        //             }
+        //             button {
+        //                 width: 100%;
+        //             }
+        //             .form-group {
+        //                 margin-bottom: 20px;
+        //                 position: relative;
+        //                 .toggle-password {
+        //                     position: absolute;
+        //                     right: 3px;
+        //                     top: 12px;
+        //                     color: $color-b;
+        //                 }
+        //                 textarea,
+        //                 input {
+        //                     height: 40px;
+        //                     border-bottom: 1px solid $color-f-bg;
+        //                     border-top: 0;
+        //                     border-left: 0;
+        //                     font-size: 15px;
+        //                     color: $color-b;
+        //                     border-right: 0;
+        //                     padding: 0;
+        //                     &::placeholder {
+        //                         color: $color-f-bg;
+        //                     }
+        //                 }
+        //             }
+        //             .Forgot-Password {
+        //                 margin: 15px 0 30px;
+        //                 a {
+        //                     float: right;
+        //                     transition: .3s;
+        //                     font-size: 15px;
+        //                     color: $color-f-bg;
+        //                     &:hover {
+        //                         color: $color-o;
+        //                         transition: .3s;
+        //                     }
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
+    }

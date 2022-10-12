@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .videocall_sec {
+            padding: 50px 0;
+        }
+        
+        .videocall_sec .vedio-box {
+            position: relative;
+            padding: 5px;
+            border: 1px solid #ddd;
+        }
+        
+        .videocall_sec .vedio-box .img {
+            overflow: hidden;
+        }
+        
+        .videocall_sec .vedio-box .img img {
+            width: 100%;
+        }
+        
+        .videocall_sec .vedio-box .imgs {
+            position: absolute;
+            bottom: 5px;
+            right: 0;
+        }
+        
+        .videocall_sec .vedio-box .imgs img {
+            height: 120px;
+            width: 200px;
+            padding: 4px 4px 0;
+            border: 1px solid #eee;
+            background: #fff;
+        }
+        
+        .videocall_sec .vedio-box .icons {
+            text-align: center;
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+        }
+        
+        .videocall_sec .vedio-box .icons button {
+            width: 40px;
+            height: 40px;
+            line-height: 38px;
+            border: none;
+            color: #fff;
+            border-radius: 50%;
+            font-size: 22px;
+            text-align: center;
+        }
+        
+        .videocall_sec .vedio-box .icons button i {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            line-height: 38px;
+            margin-left: -6px;
+            margin-top: -1px;
+        }
+        
+        @media only screen and (max-width: 768px) {
+            .videocall_sec .vedio-box .imgs img {
+                height: 80px;
+                width: 120px;
+                padding: 4px 4px 0;
+                border: 1px solid #eee;
+                background: #fff;
+            }
+        }
+        
+        .videocall_sec .vedio-box .icons .fa.fa-microphone {
+            background: #17a2b8;
+            transition: .3s;
+            border: 1px solid;
+        }
+        
+        .videocall_sec .vedio-box .icons .fa.fa-registered {
+            background-color: #28a745;
+            transition: .3s;
+            border: 1px solid;
+        }
+        
+        .videocall_sec .vedio-box .icons i.fa.fa-phone {
+            background-color: #dc3545;
+            transition: .3s;
+            border: 1px solid;
+        }
+        
+        .videocall_sec .vedio-box .icons .fa.fa-microphone:hover {
+            color: #17a2b8;
+            transition: .3s;
+            background: #fff;
+            border: 1px solid;
+        }
+        
+        .videocall_sec .vedio-box .icons .fa.fa-registered:hover {
+            color: #28a745;
+            transition: .3s;
+            background: #fff;
+            border: 1px solid;
+        }
+        
+        .videocall_sec .vedio-box .icons i.fa.fa-phone:hover {
+            color: #dc3545;
+            transition: .3s;
+            background: #fff;
+            border: 1px solid;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="videocall_sec">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-7">
+                    <div class="vedio-box">
+                        <div class="img">
+                            <img src="https://womensagenda.com.au/wp-content/uploads/2020/05/Sarah-Hill-002-1024x683.jpeg">
+                        </div>
+                        <div class="imgs">
+                            <img src="https://i.pinimg.com/originals/1d/df/a9/1ddfa98a7e262b691614bc30923a40d5.jpg">
+                        </div>
+                        <div class="icons">
+                            <button><i class="fa fa-registered" aria-hidden="true"></i></button>
+
+                            <button><i class="fa fa-phone" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+
+</html>

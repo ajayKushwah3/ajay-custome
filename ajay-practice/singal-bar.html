@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        * {
+            border: 0;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        :root {
+            --bg: #e3e4e8;
+            --bgT: #e3e4e800;
+            --fg: #17181c;
+            --inputBg: #fff;
+            --handleBg: #255ff4;
+            --handleDownBg: #0b46da;
+            --handleTrackBg: #5583f6;
+            font-size: calc(16px + (32 - 16)*(100vw - 320px)/(2560 - 320));
+        }
+        
+        body,
+        input {
+            color: var(--fg);
+            font: 1em/1.5 "Hind", sans-serif;
+        }
+        
+        body,
+        .range,
+        .range__counter {
+            display: flex;
+        }
+        
+        body {
+            background-color: var(--bg);
+            height: 100vh;
+        }
+        
+        form,
+        input,
+        .range__input,
+        .range__counter-sr {
+            width: 100%;
+        }
+        
+        form {
+            margin: auto;
+            padding: 0 0.75em;
+            max-width: 17em;
+        }
+        
+        label {
+            font-weight: bold;
+        }
+        
+        .range:not(:last-child) {
+            margin-bottom: 1.5em;
+        }
+        
+        .range input[type=range],
+        .range input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+        }
+        
+        .range input[type=range],
+        .range__input-fill {
+            border-radius: 0.25em;
+            height: 0.5em;
+        }
+        
+        .range input[type=range] {
+            background-color: var(--inputBg);
+            display: block;
+            margin: 0.5em 0;
+            padding: 0;
+        }
+        
+        .range input[type=range]:focus {
+            outline: transparent;
+        }
+        
+        .range input[type=range]::-webkit-slider-thumb {
+            background-color: var(--handleBg);
+            border: 0;
+            border-radius: 50%;
+            cursor: pointer;
+            position: relative;
+            transition: background 0.1s linear;
+            width: 1.5em;
+            height: 1.5em;
+            z-index: 1;
+        }
+        
+        .range input[type=range]::-moz-range-thumb {
+            background-color: var(--handleBg);
+            border: 0;
+            border-radius: 50%;
+            cursor: pointer;
+            position: relative;
+            transform: translateZ(1px);
+            transition: background-color 0.1s linear;
+            width: 1.5em;
+            height: 1.5em;
+            z-index: 1;
+        }
+        
+        .range input[type=range]::-moz-focus-outer {
+            border: 0;
+        }
+        
+        .range__input,
+        .range__input-fill,
+        .range__counter-column,
+        .range__counter-digit {
+            display: block;
+        }
+        
+        .range__input,
+        .range__counter {
+            position: relative;
+        }
+        
+        .range__input {
+            margin-right: 0.375em;
+        }
+        
+        .range__input:active input[type=range]::-webkit-slider-thumb,
+        .range input[type=range]:focus::-webkit-slider-thumb,
+        .range input[type=range]::-webkit-slider-thumb:hover {
+            background-color: var(--handleDownBg);
+        }
+        
+        .range__input:active input[type=range]::-moz-range-thumb,
+        .range input[type=range]:focus::-moz-range-thumb,
+        .range input[type=range]::-moz-range-thumb:hover {
+            background-color: var(--handleDownBg);
+        }
+        
+        .range__input-fill,
+        .range__counter-sr {
+            position: absolute;
+            left: 0;
+        }
+        
+        .range__input-fill {
+            background-color: var(--handleTrackBg);
+            pointer-events: none;
+            top: calc(50% - 0.25em);
+        }
+        
+        .range__counter,
+        .range__counter-digit {
+            height: 1.5em;
+        }
+        
+        .range__counter {
+            margin: auto 0;
+            overflow: hidden;
+            text-align: center;
+        }
+        
+        .range__counter-sr {
+            background-image: linear-gradient(var(--bg), var(--bgT) 0.3em 1.2em, var(--bg));
+            color: transparent;
+            letter-spacing: 0.06em;
+            top: 0;
+            text-align: right;
+            z-index: 1;
+        }
+        
+        .range__counter-column {
+            transition: transform 0.25s ease-in-out;
+            width: 0.66em;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+        
+        .range__counter-column--pause {
+            transition: none;
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #2e3138;
+                --bgT: #2e313800;
+                --fg: #e3e4e8;
+                --inputBg: #17181c;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <label for="range1">One Digit</label>
+            <input id="range1" name="range1" type="range" min="0" max="10" value="5">
+            <label for="range2">More Digits</label>
+            <input id="range2" name="range2" type="range" min="0" max="300" value="150">
+        </form>
+    </div>
+</body>
+<script>
+    window.addEventListener("DOMContentLoaded", () => {
+        let range1 = new RollCounterRange("#range1"),
+            range2 = new RollCounterRange("#range2");
+    });
+
+    class RollCounterRange {
+        constructor(id) {
+            this.el = document.querySelector(id);
+            this.srValue = null;
+            this.fill = null;
+            this.digitCols = null;
+            this.lastDigits = "";
+            this.rollDuration = 0; // the transition duration from CSS will override this
+            this.trans09 = false;
+
+            if (this.el) {
+                this.buildSlider();
+                this.el.addEventListener("input", this.changeValue.bind(this));
+            }
+        }
+        buildSlider() {
+            // create a div to contain the <input>
+            let rangeWrap = document.createElement("div");
+            rangeWrap.className = "range";
+            this.el.parentElement.insertBefore(rangeWrap, this.el);
+
+            // create another div to contain the <input> and fill
+            let rangeInput = document.createElement("span");
+            rangeInput.className = "range__input";
+            rangeWrap.appendChild(rangeInput);
+
+            // range fill, place the <input> and fill inside container <span>
+            let rangeFill = document.createElement("span");
+            rangeFill.className = "range__input-fill";
+            rangeInput.appendChild(this.el);
+            rangeInput.appendChild(rangeFill);
+
+            // create the counter
+            let counter = document.createElement("span");
+            counter.className = "range__counter";
+            rangeWrap.appendChild(counter);
+
+            // screen reader value
+            let srValue = document.createElement("span");
+            srValue.className = "range__counter-sr";
+            srValue.textContent = "0";
+            counter.appendChild(srValue);
+
+            // column for each digit
+            for (let D of this.el.max.split("")) {
+                let digitCol = document.createElement("span");
+                digitCol.className = "range__counter-column";
+                digitCol.setAttribute("aria-hidden", "true");
+                counter.appendChild(digitCol);
+
+                // digits (blank, 0–9, fake 0)
+                for (let d = 0; d <= 11; ++d) {
+                    let digit = document.createElement("span");
+                    digit.className = "range__counter-digit";
+
+                    if (d > 0)
+                        digit.textContent = d == 11 ? 0 : `${d - 1}`;
+
+                    digitCol.appendChild(digit);
+                }
+            }
+
+            this.srValue = srValue;
+            this.fill = rangeFill;
+            this.digitCols = counter.querySelectorAll(".range__counter-column");
+            this.lastDigits = this.el.value;
+
+            while (this.lastDigits.length < this.digitCols.length)
+                this.lastDigits = " " + this.lastDigits;
+
+            this.changeValue();
+
+            // use the transition duration from CSS
+            let colCS = window.getComputedStyle(this.digitCols[0]),
+                transDur = colCS.getPropertyValue("transition-duration"),
+                msLabelPos = transDur.indexOf("ms"),
+                sLabelPos = transDur.indexOf("s");
+
+            if (msLabelPos > -1)
+                this.rollDuration = transDur.substr(0, msLabelPos);
+            else if (sLabelPos > -1)
+                this.rollDuration = transDur.substr(0, sLabelPos) * 1e3;
+        }
+        changeValue() {
+            // keep the value within range
+            if (+this.el.value > this.el.max)
+                this.el.value = this.el.max;
+
+            else if (+this.el.value < this.el.min)
+                this.el.value = this.el.min;
+
+            // update the screen reader value
+            if (this.srValue)
+                this.srValue.textContent = this.el.value;
+
+            // width of fill
+            if (this.fill) {
+                let pct = this.el.value / this.el.max,
+                    fillWidth = pct * 100,
+                    thumbEm = 1 - pct;
+
+                this.fill.style.width = `calc(${fillWidth}% + ${thumbEm}em)`;
+            }
+
+            if (this.digitCols) {
+                let rangeVal = this.el.value;
+
+                // add blanks at the start if needed
+                while (rangeVal.length < this.digitCols.length)
+                    rangeVal = " " + rangeVal;
+
+                // get the differences between current and last digits
+                let diffsFromLast = [];
+                if (this.lastDigits) {
+                    rangeVal.split("").forEach((r, i) => {
+                        let diff = +r - this.lastDigits[i];
+                        diffsFromLast.push(diff);
+                    });
+                }
+
+                // roll the digits
+                this.trans09 = false;
+                rangeVal.split("").forEach((e, i) => {
+                    let digitH = 1.5,
+                        over9 = false,
+                        under0 = false,
+                        transY = e === " " ? 0 : (-digitH * (+e + 1)),
+                        col = this.digitCols[i];
+
+                    // start handling the 9-to-0 or 0-to-9 transition
+                    if (e == 0 && diffsFromLast[i] == -9) {
+                        transY = -digitH * 11;
+                        over9 = true;
+
+                    } else if (e == 9 && diffsFromLast[i] == 9) {
+                        transY = 0;
+                        under0 = true;
+                    }
+
+                    col.style.transform = `translateY(${transY}em)`;
+                    col.firstChild.textContent = "";
+
+                    // finish the transition
+                    if (over9 || under0) {
+                        this.trans09 = true;
+                        // add a temporary 9
+                        if (under0)
+                            col.firstChild.textContent = e;
+
+                        setTimeout(() => {
+                            if (this.trans09) {
+                                let pauseClass = "range__counter-column--pause",
+                                    transYAgain = -digitH * (over9 ? 1 : 10);
+
+                                col.classList.add(pauseClass);
+                                col.style.transform = `translateY(${transYAgain}em)`;
+                                void col.offsetHeight;
+                                col.classList.remove(pauseClass);
+
+                                // remove the 9
+                                if (under0)
+                                    col.firstChild.textContent = "";
+                            }
+
+                        }, this.rollDuration);
+                    }
+                });
+                this.lastDigits = rangeVal;
+            }
+        }
+    }
+</script>
+
+</html>

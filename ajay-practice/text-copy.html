@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+			<input type="text" id="myInput" value="ABC1324A">
+            <a href="javascript:void(0);" class="btn btn-theme" onclick="copyToClipboard()">ABC1234A</a>
+
+
+
+            <a href="javascript:void(0);" id="testing" data-toggle="tooltip" data-placement="top" title="Copy" class="btn btn-theme">ABC1234A</a>
+</body>
+<script>
+
+    function copyToClipboard() {
+        var copyText = document.getElementById("myInput");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999)
+        document.execCommand("copy");
+        // alert("Copied the text: " + copyText.value);
+    }
+
+
+
+
+    $(document).ready(function(){
+        $('#testing').on("click", function(){
+            var value = $(this).text();
+
+            var $temp = $("<input>");
+            $("body").append($temp);
+            $temp.val(value).select();
+            document.execCommand("copy");
+            // $temp.remove();
+        })
+    });
+</script>
+</html>

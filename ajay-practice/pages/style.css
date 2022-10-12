@@ -1,0 +1,488 @@
+.testimonials-section {
+  padding: 50px 0; }
+  .testimonials-section .testimonials-box {
+    background: #fff;
+    box-shadow: 0 0 15px 0 #bbb;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 35%; }
+    .testimonials-section .testimonials-box .image-about {
+      position: relative;
+      top: -80px;
+      width: 125px;
+      margin: 0 auto;
+      border-radius: 50%;
+      height: 125px;
+      box-shadow: 0 0 5px 0 #bbb;
+      background: #fff;
+      margin-bottom: -75px; }
+      .testimonials-section .testimonials-box .image-about img.image2 {
+        width: 100%;
+        padding: 5px; }
+    .testimonials-section .testimonials-box .content h5 {
+      font-weight: 600;
+      font-size: 16px; }
+    .testimonials-section .testimonials-box .content p {
+      font-weight: 400;
+      font-size: 15px; }
+
+.Services_page {
+  padding: 50px 0; }
+  .Services_page .Services-box {
+    padding: 20px;
+    border-radius: 5px;
+    transition: .3s;
+    text-align: center; }
+    .Services_page .Services-box:hover {
+      transition: .3s;
+      box-shadow: 0 0 5px 0 #bbb; }
+      .Services_page .Services-box:hover .image-about {
+        width: 80px;
+        height: 80px;
+        box-shadow: 0 0 5px 0 #bbb;
+        background: #000;
+        transition: .3s;
+        border-radius: 50%;
+        margin: 0 auto; }
+        .Services_page .Services-box:hover .image-about img.image2 {
+          width: 100%;
+          transition: .3s; }
+      .Services_page .Services-box:hover .content h5 {
+        transition: .3s;
+        font-size: 16px;
+        font-weight: 600;
+        color: #bbb; }
+      .Services_page .Services-box:hover .content p {
+        transition: .3s;
+        font-size: 14px; }
+    .Services_page .Services-box .image-about {
+      width: 80px;
+      height: 80px;
+      box-shadow: 0 0 5px 0 #bbb;
+      background: #fff;
+      border-radius: 50%;
+      margin: 0 auto;
+      transition: .3s; }
+      .Services_page .Services-box .image-about img.image2 {
+        transition: .3s;
+        width: 100%; }
+    .Services_page .Services-box .content h5 {
+      transition: .3s;
+      font-size: 16px;
+      font-weight: 600; }
+    .Services_page .Services-box .content p {
+      transition: .3s;
+      font-size: 14px; }
+
+.Payment-section {
+  background-color: #fecdc9;
+  padding: 50px 0;
+  height: 100vh; }
+  .Payment-section .btn-th {
+    background-color: #fecdc9;
+    color: #a12d29;
+    padding: 8px 35px;
+    border: 1px solid #a12d29;
+    border-radius: 50px;
+    transition: .3s; }
+  .Payment-section .btn-th:hover {
+    background-color: #a12d29;
+    color: #fecdc9;
+    border: 1px solid #a12d29;
+    padding: 8px 35px;
+    transition: .3s;
+    border-radius: 50px; }
+  .Payment-section .Payment-box {
+    box-shadow: 0 0 15px 0 #bbb;
+    padding: 30px;
+    border-radius: 5px;
+    background-color: #fff; }
+    .Payment-section .Payment-box .custom-form {
+      font-weight: 400;
+      font-size: 16px;
+      border-radius: 4px; }
+      .Payment-section .Payment-box .custom-form .btn-primary {
+        background-color: #a12d29;
+        border-color: #a12d29; }
+      .Payment-section .Payment-box .custom-form .form-group {
+        position: relative;
+        padding-top: 16px;
+        margin-bottom: 16px; }
+        .Payment-section .Payment-box .custom-form .form-group .animated-label {
+          position: absolute;
+          top: 20px;
+          left: 0;
+          bottom: 0;
+          z-index: 2;
+          width: 100%;
+          font-weight: 600;
+          opacity: 0.5;
+          cursor: text;
+          transition: 0.2s ease all;
+          margin: 0;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          user-select: none; }
+          .Payment-section .Payment-box .custom-form .form-group .animated-label:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 45%;
+            height: 2px;
+            width: 10px;
+            visibility: hidden;
+            background-color: #a12d29;
+            transition: 0.2s ease all; }
+        .Payment-section .Payment-box .custom-form .form-group.not-empty .animated-label {
+          top: 0;
+          font-size: 12px; }
+        .Payment-section .Payment-box .custom-form .form-group .form-control {
+          position: relative;
+          z-index: 1;
+          background-color: #0000;
+          border-radius: 0;
+          border-width: 0 0 1px;
+          border-bottom-color: rgba(0, 0, 0, 0.25);
+          height: auto;
+          padding: 3px 0 5px; }
+          .Payment-section .Payment-box .custom-form .form-group .form-control:focus {
+            box-shadow: none;
+            border-bottom-color: rgba(0, 0, 0, 0.12); }
+            .Payment-section .Payment-box .custom-form .form-group .form-control:focus ~ .animated-label {
+              top: 0;
+              opacity: 1;
+              color: #a12d29;
+              font-size: 12px; }
+              .Payment-section .Payment-box .custom-form .form-group .form-control:focus ~ .animated-label:after {
+                visibility: visible;
+                width: 100%;
+                left: 0; }
+
+.forms {
+  padding: 80px 0; }
+  .forms.login .login-form {
+    box-shadow: 0 0 5px 0 #bbb;
+    display: grid;
+    grid-template-columns: 50% 50%; }
+    .forms.login .login-form .left {
+      text-align: center;
+      padding: 20px; }
+    .forms.login .login-form .right {
+      padding: 30px 50px; }
+      .forms.login .login-form .right h1 {
+        font-family: "Adigiana_Ultra";
+        color: #fd6606;
+        font-weight: 100;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 55px;
+        line-height: 55px; }
+      .forms.login .login-form .right p {
+        color: #292929;
+        text-align: center; }
+        .forms.login .login-form .right p a {
+          color: #fd6606;
+          transition: .3s;
+          font-weight: 900;
+          border-bottom: 1px solid #fd6606; }
+          .forms.login .login-form .right p a:hover {
+            color: #fd6606;
+            border-bottom: 1px solid #fd6606;
+            transition: .3s; }
+      .forms.login .login-form .right button {
+        width: 100%; }
+      .forms.login .login-form .right .form-group {
+        margin-bottom: 20px;
+        position: relative; }
+        .forms.login .login-form .right .form-group .toggle-password {
+          position: absolute;
+          right: 3px;
+          top: 12px;
+          color: #fd6606; }
+        .forms.login .login-form .right .form-group textarea,
+        .forms.login .login-form .right .form-group input {
+          height: 40px;
+          border-bottom: 1px solid #292929;
+          border-top: 0;
+          border-left: 0;
+          font-size: 15px;
+          color: #fd6606;
+          border-right: 0;
+          padding: 0; }
+          .forms.login .login-form .right .form-group textarea::placeholder,
+          .forms.login .login-form .right .form-group input::placeholder {
+            color: #292929; }
+      .forms.login .login-form .right .Forgot-Password {
+        margin: 15px 0 30px; }
+        .forms.login .login-form .right .Forgot-Password a {
+          float: right;
+          transition: .3s;
+          font-size: 15px;
+          color: #292929; }
+          .forms.login .login-form .right .Forgot-Password a:hover {
+            color: #fd6606;
+            transition: .3s; }
+  .forms.forgot-password .forgot-password-form {
+    box-shadow: 0 0 5px 0 #bbb;
+    display: grid;
+    grid-template-columns: 50% 50%; }
+    .forms.forgot-password .forgot-password-form .left {
+      text-align: center;
+      padding: 20px; }
+    .forms.forgot-password .forgot-password-form .right {
+      padding: 25% 50px 30px; }
+      .forms.forgot-password .forgot-password-form .right h1 {
+        font-family: "Adigiana_Ultra";
+        color: #fd6606;
+        font-weight: 100;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 43px;
+        line-height: 55px; }
+      .forms.forgot-password .forgot-password-form .right p {
+        color: #292929;
+        text-align: center; }
+        .forms.forgot-password .forgot-password-form .right p a {
+          color: #fd6606;
+          transition: .3s;
+          font-weight: 900;
+          border-bottom: 1px solid #fd6606; }
+          .forms.forgot-password .forgot-password-form .right p a:hover {
+            color: #fd6606;
+            border-bottom: 1px solid #fd6606;
+            transition: .3s; }
+      .forms.forgot-password .forgot-password-form .right button {
+        width: 100%; }
+      .forms.forgot-password .forgot-password-form .right .form-group {
+        margin-bottom: 20px; }
+        .forms.forgot-password .forgot-password-form .right .form-group input {
+          height: 40px;
+          border-bottom: 1px solid #292929;
+          border-top: 0;
+          border-left: 0;
+          font-size: 15px;
+          color: #fd6606;
+          border-right: 0;
+          padding: 0; }
+          .forms.forgot-password .forgot-password-form .right .form-group input::placeholder {
+            color: #292929; }
+  .forms.otp .otp-form {
+    box-shadow: 0 0 5px 0 #bbb;
+    display: grid;
+    grid-template-columns: 50% 50%; }
+    .forms.otp .otp-form .left {
+      text-align: center;
+      padding: 20px; }
+    .forms.otp .otp-form .right {
+      padding: 25% 50px 30px; }
+      .forms.otp .otp-form .right h1 {
+        font-family: "Adigiana_Ultra";
+        color: #fd6606;
+        font-weight: 100;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 55px;
+        line-height: 55px; }
+      .forms.otp .otp-form .right p {
+        color: #292929;
+        text-align: center; }
+        .forms.otp .otp-form .right p a {
+          color: #fd6606;
+          transition: .3s;
+          font-weight: 900;
+          border-bottom: 1px solid #fd6606; }
+          .forms.otp .otp-form .right p a:hover {
+            color: #fd6606;
+            border-bottom: 1px solid #fd6606;
+            transition: .3s; }
+      .forms.otp .otp-form .right button {
+        width: 100%; }
+      .forms.otp .otp-form .right .form-group {
+        margin-bottom: 20px; }
+        .forms.otp .otp-form .right .form-group input {
+          height: 40px;
+          border-bottom: 1px solid #292929;
+          border-top: 0;
+          border-left: 0;
+          font-size: 15px;
+          color: #fd6606;
+          border-right: 0;
+          padding: 0; }
+          .forms.otp .otp-form .right .form-group input::placeholder {
+            color: #292929; }
+  .forms.reset-password .reset-password-form {
+    box-shadow: 0 0 5px 0 #bbb;
+    display: grid;
+    grid-template-columns: 50% 50%; }
+    .forms.reset-password .reset-password-form .left {
+      text-align: center;
+      padding: 20px; }
+    .forms.reset-password .reset-password-form .right {
+      padding: 20% 50px 30px; }
+      .forms.reset-password .reset-password-form .right h1 {
+        font-family: "Adigiana_Ultra";
+        color: #fd6606;
+        font-weight: 100;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 43px;
+        line-height: 55px; }
+      .forms.reset-password .reset-password-form .right p {
+        color: #292929;
+        text-align: center; }
+        .forms.reset-password .reset-password-form .right p a {
+          color: #fd6606;
+          transition: .3s;
+          font-weight: 900;
+          border-bottom: 1px solid #fd6606; }
+          .forms.reset-password .reset-password-form .right p a:hover {
+            color: #fd6606;
+            border-bottom: 1px solid #fd6606;
+            transition: .3s; }
+      .forms.reset-password .reset-password-form .right button {
+        width: 100%; }
+      .forms.reset-password .reset-password-form .right .form-group {
+        margin-bottom: 20px;
+        position: relative; }
+        .forms.reset-password .reset-password-form .right .form-group .toggle-password {
+          position: absolute;
+          right: 3px;
+          top: 12px;
+          color: #fd6606; }
+        .forms.reset-password .reset-password-form .right .form-group input {
+          height: 40px;
+          border-bottom: 1px solid #292929;
+          border-top: 0;
+          border-left: 0;
+          font-size: 15px;
+          color: #fd6606;
+          border-right: 0;
+          padding: 0; }
+          .forms.reset-password .reset-password-form .right .form-group input::placeholder {
+            color: #292929; }
+  .forms.sign-up .sign-up-form {
+    box-shadow: 0 0 5px 0 #bbb;
+    display: grid;
+    grid-template-columns: 100%; }
+    .forms.sign-up .sign-up-form .right {
+      padding: 30px 50px; }
+      .forms.sign-up .sign-up-form .right h1 {
+        font-family: "Adigiana_Ultra";
+        color: #fd6606;
+        font-weight: 100;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 55px;
+        line-height: 55px; }
+      .forms.sign-up .sign-up-form .right p {
+        color: #292929;
+        text-align: center; }
+        .forms.sign-up .sign-up-form .right p a {
+          color: #fd6606;
+          transition: .3s;
+          font-weight: 900;
+          border-bottom: 1px solid #fd6606; }
+          .forms.sign-up .sign-up-form .right p a:hover {
+            color: #fd6606;
+            border-bottom: 1px solid #fd6606;
+            transition: .3s; }
+      .forms.sign-up .sign-up-form .right button {
+        width: 100%; }
+      .forms.sign-up .sign-up-form .right .form-group {
+        margin-bottom: 20px;
+        position: relative; }
+        .forms.sign-up .sign-up-form .right .form-group .toggle-password {
+          position: absolute;
+          right: 3px;
+          top: 12px;
+          color: #fd6606; }
+        .forms.sign-up .sign-up-form .right .form-group textarea,
+        .forms.sign-up .sign-up-form .right .form-group input {
+          height: 40px;
+          border-bottom: 1px solid #292929;
+          border-top: 0;
+          border-left: 0;
+          font-size: 15px;
+          color: #fd6606;
+          border-right: 0;
+          padding: 0; }
+          .forms.sign-up .sign-up-form .right .form-group textarea::placeholder,
+          .forms.sign-up .sign-up-form .right .form-group input::placeholder {
+            color: #292929; }
+      .forms.sign-up .sign-up-form .right .Forgot-Password {
+        margin: 15px 0 30px; }
+        .forms.sign-up .sign-up-form .right .Forgot-Password a {
+          float: right;
+          transition: .3s;
+          font-size: 15px;
+          color: #292929; }
+          .forms.sign-up .sign-up-form .right .Forgot-Password a:hover {
+            color: #fd6606;
+            transition: .3s; }
+
+.forms2 {
+  padding: 125px 0;
+  background-image: url("../img/pathsala/home_page/img_header_back.jpg"); }
+  .forms2.login .login-form {
+    box-shadow: 0 0 5px 0 #bbb; }
+    .forms2.login .login-form .left {
+      text-align: center;
+      padding: 20px; }
+    .forms2.login .login-form .right {
+      padding: 30px 50px; }
+      .forms2.login .login-form .right h1 {
+        font-family: "Adigiana_Ultra";
+        color: #ffa21a;
+        font-weight: 100;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 55px;
+        line-height: 55px; }
+      .forms2.login .login-form .right p {
+        color: #000;
+        text-align: center; }
+        .forms2.login .login-form .right p a {
+          color: #ffa21a;
+          transition: .3s;
+          font-weight: 900;
+          border-bottom: 1px solid #ffa21a; }
+          .forms2.login .login-form .right p a:hover {
+            color: #000;
+            border-bottom: 1px solid #000;
+            transition: .3s; }
+      .forms2.login .login-form .right button {
+        width: 100%; }
+      .forms2.login .login-form .right .form-group {
+        margin-bottom: 20px;
+        position: relative; }
+        .forms2.login .login-form .right .form-group .toggle-password {
+          position: absolute;
+          right: 3px;
+          top: 12px;
+          color: #ffa21a; }
+        .forms2.login .login-form .right .form-group textarea,
+        .forms2.login .login-form .right .form-group input {
+          height: 40px;
+          border-bottom: 1px solid #000;
+          border-top: 0;
+          border-left: 0;
+          font-size: 15px;
+          color: #000;
+          border-right: 0;
+          padding: 0; }
+          .forms2.login .login-form .right .form-group textarea::placeholder,
+          .forms2.login .login-form .right .form-group input::placeholder {
+            color: #000; }
+      .forms2.login .login-form .right .Forgot-Password {
+        margin: 15px 0 30px; }
+        .forms2.login .login-form .right .Forgot-Password a {
+          float: right;
+          transition: .3s;
+          font-size: 15px;
+          color: #4b4d4c; }
+          .forms2.login .login-form .right .Forgot-Password a:hover {
+            color: #000;
+            transition: .3s; }
+
+/*# sourceMappingURL=style.css.map */

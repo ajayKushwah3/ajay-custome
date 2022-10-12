@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>add more</title>
+</head>
+<body>
+
+	<div class="col-lg-4">
+                               
+                                 <div class="mt-3" >
+                                    <h4>Work Experiance</h4>
+                                </div>
+                                <div>
+                                    <button type="button" class=" add-more-btn  " id="addMore" add="1">+Add Work Experiance</button> 
+                                <hr>
+                                </div>
+                                <form method="" action="">
+                                    <div class="row" id="dContecnt">
+                                        <div class="col-md-12 mb-3">
+                                            <label for="validationCustom004">Designation</label>
+                                            <input type="text" class="form-control" id="designation" name="designation[]" placeholder="Designation"  required>
+                                        </div>
+                                        <div class="col-md-12 mb-3">
+                                            <label for="validationCustom004">Company</label>
+                                            <input type="text" class="form-control" id="Company" name="Company[]" placeholder="Company"  required>
+                                        </div>
+                                    </div>
+                                </form>
+
+                            </div>
+<script type="text/javascript">
+        $('#addMore').click(function(){
+            var add = $(this).attr('add');
+            $(this).attr('add',parseInt(add)+1);
+            var cnt = '<hr><div class="" style="width:100%;" id="row'+add+'"><div class="col-md-12 mb-3"><label for="validationCustom004">Designation</label><input type="text" class="form-control" id="designation" name="designation[]" placeholder="Designation"  required></div><div class="col-md-12 mb-3"><label for="validationCustom004">Company</label><input type="text" class="form-control" id="Company" name="Company[]" placeholder="Company"  required><button type="button" class="btn btn-icon mt-3 btn-danger removeRow" onclick="removeRow('+add+')" id="'+add+'"> <i class="fa fa-times" aria-hidden="true"></i></button></div></div></div></div>';
+            $('#dContecnt').append(cnt)
+        })
+        
+                                    
+        function removeRow(id){
+            $('#row'+id).remove()
+        }
+    </script>
+</body>
+</html>

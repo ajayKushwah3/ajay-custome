@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    <style>
+        .Payment-section {
+            background-color: #fecdc9;
+            padding: 50px 0;
+            height: 100vh;
+        }
+        
+        .Payment-section .btn-th {
+            background-color: #fecdc9;
+            color: #a12d29;
+            padding: 8px 35px;
+            border: 1px solid #a12d29;
+            border-radius: 50px;
+            transition: .3s;
+        }
+        
+        .Payment-section .btn-th:hover {
+            background-color: #a12d29;
+            color: #fecdc9;
+            border: 1px solid #a12d29;
+            padding: 8px 35px;
+            transition: .3s;
+            border-radius: 50px;
+        }
+        
+        .Payment-section .Payment-box {
+            box-shadow: 0 0 15px 0 #bbb;
+            padding: 30px;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+        
+        .Payment-section .Payment-box .custom-form {
+            font-weight: 400;
+            font-size: 16px;
+            border-radius: 4px;
+        }
+        
+        .Payment-section .Payment-box .custom-form .btn-primary {
+            background-color: #a12d29;
+            border-color: #a12d29;
+        }
+        
+        .Payment-section .Payment-box .custom-form .form-group {
+            position: relative;
+            padding-top: 16px;
+            margin-bottom: 16px;
+        }
+        
+        .Payment-section .Payment-box .custom-form .form-group .animated-label {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            bottom: 0;
+            z-index: 2;
+            width: 100%;
+            font-weight: 600;
+            opacity: 0.5;
+            cursor: text;
+            transition: 0.2s ease all;
+            margin: 0;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+        
+        .Payment-section .Payment-box .custom-form .form-group .animated-label:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 45%;
+            height: 2px;
+            width: 10px;
+            visibility: hidden;
+            background-color: #a12d29;
+            transition: 0.2s ease all;
+        }
+        
+        .Payment-section .Payment-box .custom-form .form-group.not-empty .animated-label {
+            top: 0;
+            font-size: 12px;
+        }
+        
+        .Payment-section .Payment-box .custom-form .form-group .form-control {
+            position: relative;
+            z-index: 1;
+            background-color: #0000;
+            border-radius: 0;
+            border-width: 0 0 1px;
+            border-bottom-color: rgba(0, 0, 0, 0.25);
+            height: auto;
+            padding: 3px 0 5px;
+        }
+        
+        .Payment-section .Payment-box .custom-form .form-group .form-control:focus {
+            box-shadow: none;
+            border-bottom-color: rgba(0, 0, 0, 0.12);
+        }
+        
+        .Payment-section .Payment-box .custom-form .form-group .form-control:focus~.animated-label {
+            top: 0;
+            opacity: 1;
+            color: #a12d29;
+            font-size: 12px;
+        }
+        
+        .Payment-section .Payment-box .custom-form .form-group .form-control:focus~.animated-label:after {
+            visibility: visible;
+            width: 100%;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="Payment-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-6 ">
+                    <div class="Payment-box">
+                        <form action="#" class="custom-form">
+                            <h3 class="text-center">Payment Form</h3>
+                            <div class="row justify-content-center">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="Name" id="name">
+                                        <label for="name" class="animated-label">Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="address" id="address">
+                                        <label for="address" class="animated-label">Address</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="city" id="city">
+                                        <label for="city" class="animated-label">City</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="state" id="state">
+                                        <label for="state" class="animated-label">State</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="zip" id="zip">
+                                        <label for="zip" class="animated-label">Zip</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="country" id="country">
+                                        <label for="country" class="animated-label">Country</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input type="tel" class="form-control" name="tel" id="tel">
+                                        <label for="tel" class="animated-label">Tel</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" name="email" id="email">
+                                        <label for="email" class="animated-label">Email</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="amount" id="amount">
+                                        <label for="amount" class="animated-label">Amount</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="currency" id="currency">
+                                        <label for="currency" class="animated-label">Currency</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 mt-3">
+                                    <div class="submit">
+                                        <button class="btn btn-primary btn-block">Checkout</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

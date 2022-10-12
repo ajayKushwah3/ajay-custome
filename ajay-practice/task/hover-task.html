@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hover</title>
+<style type="text/css">
+	body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: #f6f6f6;
+}
+.Hover-box .box-content ul li {
+    list-style: none;
+    font-family: sans-serif;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.hover-div {
+    width: 50%;
+    position: absolute;
+    background: #fff;
+    padding: 30px;
+    font-family: sans-serif;
+    font-size: 14px;
+    box-shadow: 0 0 15px 0 black;
+}
+.Hover-box .box-content ul li a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #454545;
+}
+ .hover-div {
+	display: none;
+}
+ .aj-hover1:hover + .hover-div {
+	display: block;
+}
+</style>
+</head>
+
+<body>
+	<section class="Hover-box">
+		<div class="box-content">
+			<ul>
+				<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+				<li>Aliquam tincidunt mauris eu risus.</li>
+				<li>Vestibulum auctor
+				 <a href="javascript:void(0);" class="aj-hover1">dapibus</a>
+				 <div class="hover-div">
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+
+			</div>
+				 neque.</li>
+				<li>Nunc dignissim risus id metus.</li>
+				<li>Cras ornare <a href="javascript:void(0);" class="aj-hover2">tristique</a> elit.</li>
+				<li>Vivamus vestibulum ntulla nec ante.</li>
+				<li>Praesent placerat risus <a href="javascript:void(0);" class="aj-hover3">quis</a> eros.</li>
+				<li>Fusce pellentesque suscipit nibh.</li>
+				<li>Integer vitae libero ac risus <a href="javascript:void(0);" class="aj-hover4">egestas</a> placerat.</li>
+				<li>Vestibulum commodo <a href="javascript:void(0)" class="aj-hover5">felis</a> quis tortor.</li>
+				<li> aliquam sollicitudin leo.</li>
+				<li>Cras iaculis <a href="javascript:void(0);" class="aj-hover6">ultricies</a> nulla.</li>
+				<li>Donec quis dui at dolor tempor interdum.</li>
+			</ul>
+			
+		</div>		
+	</section>
+</body>
+</html>

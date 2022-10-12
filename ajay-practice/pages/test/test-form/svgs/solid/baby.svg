@@ -1,0 +1,20 @@
+    END,
+                @locked = Locked,
+                Locked = 1,
+
+                /* If the Uninitialized flag (0x1) if it is set,
+                   remove it and return InitializeItem (0x1) in actionFlags */
+                Flags = CASE
+                    WHEN (Flags & 1) <> 0 THEN (Flags & ~1)
+                    ELSE Flags
+                    END,
+                @actionFlags = CASE
+                    WHEN (Flags & 1) <> 0 THEN 1
+                    ELSE 0
+                    END
+            WHERE SessionId = @id
+            IF @length IS NOT NULL BEGIN
+                READTEXT [tempdb].dbo.ASPStateTempSessions.SessionItemLong @textptr 0 @length
+            END
+
+    

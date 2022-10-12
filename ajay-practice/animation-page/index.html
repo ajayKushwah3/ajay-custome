@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Site</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    <style>
+        .testimonial-area {
+            padding: 50px 0;
+            background-color: #e4f4fd;
+        }
+        
+        .testimonial-area .all-titel {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .testimonial-area .partner-area .partner-slider .partner-item.rainbow {
+            position: relative;
+            text-align: center;
+            z-index: 0;
+            width: 100%;
+            height: 310px;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: .3s;
+        }
+        
+        .testimonial-area .partner-area .partner-slider .partner-item.rainbow .tretmnt {
+            background-color: #fff;
+            padding: 20px;
+            margin: 10px;
+        }
+        
+        .testimonial-area .partner-area .partner-slider .partner-item.rainbow .tretmnt .img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto;
+            box-shadow: 0 0 5px 0 #bbb;
+            text-align: center;
+            padding: 5px 5px;
+        }
+        
+        .testimonial-area .partner-area .partner-slider .partner-item.rainbow .tretmnt .img img {
+            width: 70px;
+            height: 70px;
+            margin: 0px auto 0;
+            border-radius: 50%;
+        }
+        
+        .testimonial-area .partner-area .partner-slider .partner-item.rainbow .tretmnt .trtmnt-cncr .wrap {
+            margin-top: 20px;
+            margin-right: 45%;
+        }
+        
+        .testimonial-area .partner-area .partner-slider .partner-item.rainbow .tretmnt .trtmnt-cncr .wrap .btn-theme {
+            min-height: 40px;
+            padding: 9px 20px 6px;
+        }
+        
+        .testimonial-area .partner-area .partner-slider .partner-item.rainbow .tretmnt .trtmnt-cncr .wrap .btn-theme::before {
+            min-height: calc(40px + 12px);
+        }
+        
+        .testimonial-area .partner-area .partner-slider .partner-item.rainbow:hover {
+            transition: .3s;
+        }
+        
+        .testimonial-area .partner-area .partner-slider .partner-item.rainbow:hover::before {
+            content: '';
+            position: absolute;
+            z-index: -2;
+            left: -50%;
+            top: -50%;
+            width: 200%;
+            height: 200%;
+            background-color: #399953;
+            background-repeat: no-repeat;
+            background-size: 50% 50%, 50% 50%;
+            background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+            background-image: linear-gradient(#269af7, #269af7), linear-gradient(#062e59, #062e59), linear-gradient(#062e59, #062e59), linear-gradient(#269af7, #269af7);
+            animation: rotate 10s linear infinite;
+        }
+        
+        .testimonial-area .partner-area .partner-slider .partner-item.rainbow:hover::after {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            left: 6px;
+            top: 6px;
+            width: calc(100% - 12px);
+            height: calc(100% - 12px);
+            background: white;
+            border-radius: 5px;
+        }
+        
+        .testimonial-area .partner-area .partner-slider .owl-nav button {
+            position: absolute;
+            top: 45%;
+            font-size: 26px;
+            color: #269af7;
+            opacity: .5;
+        }
+        
+        .testimonial-area .partner-area .partner-slider .owl-nav button:hover {
+            background-color: #0000;
+            color: #269af7;
+            opacity: 1;
+        }
+        
+        .testimonial-area .partner-area .partner-slider .owl-nav button.owl-prev {
+            left: -25px;
+        }
+        
+        .testimonial-area .partner-area .partner-slider .owl-nav button.owl-next {
+            right: -25px;
+        }
+        
+        @keyframes rotate {
+            100% {
+                transform: rotate(1turn);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="testimonial-area">
+        <div class="container">
+            <div class="all-titel">
+                <h1> CANCER & TREATMENT </h1>
+            </div>
+            <div class="partner-area">
+                <div class="container">
+                    <div class="partner-slider">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="partner-item rainbow">
+                                    <div class="tretmnt">
+                                        <div class="img">
+                                            <a href="javascript:void(0);"><img src="assets/img/skin.svg"></a>
+                                        </div>
+                                        <div class="trtmnt-cncr">
+                                            <h4> SKIN </h4>
+                                            <div class="content">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
+                                            </div>
+                                            <div class="wrap">
+                                                <a href="javascript:void(0);" class="btn-theme"> Read More </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="partner-item rainbow">
+                                    <div class="tretmnt">
+                                        <div class="img">
+                                            <a href="javascript:void(0);"><img src="assets/img/thyroid.svg"></a>
+                                        </div>
+                                        <div class="trtmnt-cncr">
+                                            <h4> THYROID </h4>
+                                            <div class="content">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
+                                            </div>
+                                            <div class="wrap">
+                                                <a href="javascript:void(0);" class="btn-theme"> Read More </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="partner-item rainbow">
+                                    <div class="tretmnt">
+                                        <div class="img">
+                                            <img src="assets/img/heart.svg">
+                                        </div>
+                                        <div class="trtmnt-cncr">
+                                            <h4> HIPEC Surgery </h4>
+                                            <div class="content">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
+                                            </div>
+                                            <div class="wrap">
+                                                <a href="javascript:void(0);" class="btn-theme"> Read More </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="partner-item rainbow">
+                                    <div class="tretmnt">
+                                        <div class="img">
+                                            <a href="javascript:void(0);"><img src="assets/img/thyroid.svg"></a>
+                                        </div>
+                                        <div class="trtmnt-cncr">
+                                            <h4> THYROID </h4>
+                                            <div class="content">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
+                                            </div>
+                                            <div class="wrap">
+                                                <a href="javascript:void(0);" class="btn-theme"> Read More </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+    </section>
+</body>
+
+</html>

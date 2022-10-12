@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>test</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.css">
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+</head>
+
+<body>
+
+    <style type="text/css">
+        .radio-sec-1 .checkbox {
+            margin: 0;
+            padding: 5px 0;
+            position: relative;
+        }
+        
+        .radio-sec-1 .checkbox label {
+            padding-left: 35px;
+            line-height: 1.8;
+        }
+        
+        .radio-sec-1 .checkbox label a {
+            color: #8b8b8b;
+            text-decoration: underline;
+        }
+        
+        .radio-sec-1 .checkbox label a:hover {
+            color: #3c5570;
+        }
+        
+        .radio-sec-1 .checkbox input[type="checkbox"],
+        .radio-sec-1 .checkbox input[type="radio"] {
+            display: none;
+        }
+        
+        .radio-sec-1 .checkbox input[type="checkbox"]+label:before,
+        .radio-sec-1 .checkbox input[type="radio"]+label:before {
+            font-family: 'LinearIcons';
+            content: "";
+            line-height: 22px;
+            font-size: 16px;
+            position: absolute;
+            border: 1px solid #bbc4c7;
+            display: inline-block;
+            height: 25px;
+            width: 25px;
+            padding: 0;
+            left: 0;
+            -moz-border-radius: 100%;
+            -webkit-border-radius: 100%;
+            border-radius: 100%;
+            -moz-transform: scale(0.8);
+            -ms-transform: scale(0.8);
+            -o-transform: scale(0.8);
+            -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+            -moz-transition: all 0.2s;
+            -o-transition: all 0.2s;
+            -webkit-transition: all 0.2s;
+            transition: all 0.2s;
+        }
+        
+        .radio-sec-1 .checkbox input[type="checkbox"]:checked+label:before,
+        .radio-sec-1 .checkbox input[type="radio"]:checked+label:before {
+            background: #3c5570;
+            color: white;
+            border-color: #3c5570;
+            text-align: center;
+            -moz-transform: scale(0.8);
+            -ms-transform: scale(0.8);
+            -o-transform: scale(0.8);
+            -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+        }
+        
+        .radio-sec-1 .checkbox input[type="checkbox"]:checked+label:before {
+            content: "\2714";
+        }
+        
+        .radio-sec-1 .checkbox input[type="radio"]:checked+label:before {
+            content: "●";
+            line-height: 16px;
+            font-size: 20px;
+        }
+        
+        .radio-sec-1 .checkbox input[type="checkbox"]:checked+label:after,
+        .radio-sec-1 .checkbox input[type="radio"]:checked+label:after {
+            font-weight: bold;
+        }
+        /* ------------------------------section 2----------------------------------- */
+        
+        .custom-radios div {
+            display: inline-block;
+        }
+        
+        .custom-radios input[type="radio"] {
+            display: none;
+        }
+        
+        .custom-radios input[type="radio"]+label {
+            color: #333;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+        
+        .custom-radios input[type="radio"]+label span {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            margin: -1px 4px 0 0;
+            vertical-align: middle;
+            cursor: pointer;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+            background-repeat: no-repeat;
+            background-position: center;
+            text-align: center;
+            line-height: 44px;
+        }
+        
+        .custom-radios input[type="radio"]+label span img {
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .custom-radios input[type="radio"]#color-1+label span {
+            background-color: #2ecc71;
+        }
+        
+        .custom-radios input[type="radio"]#color-2+label span {
+            background-color: #3498db;
+        }
+        
+        .custom-radios input[type="radio"]#color-3+label span {
+            background-color: #f1c40f;
+        }
+        
+        .custom-radios input[type="radio"]#color-4+label span {
+            background-color: #e74c3c;
+        }
+        
+        .custom-radios input[type="radio"]:checked+label span img {
+            opacity: 1;
+        }
+        /* -------------------------------redio ---------------------- */
+        
+        .radio-sec-3 [type="radio"]:checked,
+        .radio-sec-3 [type="radio"]:not(:checked) {
+            position: absolute;
+            left: -9999px;
+        }
+        
+        .radio-sec-3 [type="radio"]:checked+label,
+        .radio-sec-3 [type="radio"]:not(:checked)+label {
+            position: relative;
+            padding-left: 28px;
+            cursor: pointer;
+            line-height: 20px;
+            display: inline-block;
+            color: #666;
+        }
+        
+        .radio-sec-3 [type="radio"]:checked+label:before,
+        .radio-sec-3 [type="radio"]:not(:checked)+label:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 18px;
+            height: 18px;
+            border: 1px solid #ddd;
+            border-radius: 100%;
+            background: #fff;
+        }
+        
+        .radio-sec-3 [type="radio"]:checked+label:after,
+        .radio-sec-3 [type="radio"]:not(:checked)+label:after {
+            content: '';
+            width: 12px;
+            height: 12px;
+            background: #F87DA9;
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            border-radius: 100%;
+            -webkit-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+        }
+        
+        .radio-sec-3 [type="radio"]:not(:checked)+label:after {
+            opacity: 0;
+            -webkit-transform: scale(0);
+            transform: scale(0);
+        }
+        
+        .radio-sec-3 [type="radio"]:checked+label:after {
+            opacity: 1;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+        /* -----------------------------------------sec-4---------------- */
+        
+        .radio-sec-4 .switch {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 150px;
+            height: 50px;
+            text-align: center;
+            margin: -30px 0 0 -75px;
+            background: #4cd964;
+            -webkit-transition: all 0.2s ease;
+            -moz-transition: all 0.2s ease;
+            -o-transition: all 0.2s ease;
+            -ms-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+            border-radius: 25px;
+        }
+        
+        .radio-sec-4 .switch span {
+            position: absolute;
+            width: 20px;
+            height: 4px;
+            top: 50%;
+            left: 50%;
+            margin: -2px 0px 0px -4px;
+            background: #fff;
+            display: block;
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            -webkit-transition: all 0.2s ease;
+            -moz-transition: all 0.2s ease;
+            -o-transition: all 0.2s ease;
+            -ms-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+            border-radius: 2px;
+        }
+        
+        .radio-sec-4 .switch span:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 4px;
+            height: 12px;
+            margin-top: -8px;
+            background: #fff;
+            -webkit-transition: all 0.2s ease;
+            -moz-transition: all 0.2s ease;
+            -o-transition: all 0.2s ease;
+            -ms-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+            border-radius: 2px;
+        }
+        
+        .radio-sec-4 input[type=radio] {
+            display: none;
+        }
+        
+        .radio-sec-4 .switch label {
+            cursor: pointer;
+            color: rgba(0, 0, 0, 0.2);
+            width: 60px;
+            line-height: 50px;
+            -webkit-transition: all 0.2s ease;
+            -moz-transition: all 0.2s ease;
+            -o-transition: all 0.2s ease;
+            -ms-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+        }
+        
+        .radio-sec-4 label[for=yes] {
+            position: absolute;
+            left: 0px;
+            height: 20px;
+        }
+        
+        .radio-sec-4 label[for=no] {
+            position: absolute;
+            right: 0px;
+        }
+        
+        .radio-sec-4 #no:checked~.switch {
+            background: #ff3b30;
+        }
+        
+        .radio-sec-4 #no:checked~.switch span {
+            background: #fff;
+            margin-left: -8px;
+        }
+        
+        .radio-sec-4 #no:checked~.switch span:after {
+            background: #fff;
+            height: 20px;
+            margin-top: -8px;
+            margin-left: 8px;
+        }
+        
+        .radio-sec-4 #yes:checked~.switch label[for=yes] {
+            color: #fff;
+        }
+        
+        .radio-sec-4 #no:checked~.switch label[for=no] {
+            color: #fff;
+        }
+    </style>
+    <section class="radio-sec-1">
+        <div class=preloader>
+            <span class="checkbox">
+                <input type="radio" class="aj-radio4" name="radiogroup-type" id="acolor-4">
+                <label for="acolor-4" class="aj-radio4">dadasd</label>
+            </span>
+            <span class="checkbox">
+                <input type="radio" class="aj-radio3" name="radiogroup-type" id="acolor-3">
+                <label for="acolor-3" class="aj-radio3">dadasd</label>
+            </span>
+            <span class="checkbox">
+                <input type="radio" class="aj-radio2" name="radiogroup-type" id="acolor-2">
+                <label for="acolor-2" class="aj-radio2">dadasd</label>
+            </span>
+            <span class="checkbox">
+                <input type="checkbox" class="aj-radio1" name="radiogroup-type" id="acolor-1">
+                <label for="acolor-1" class="aj-radio1">asdasd</label>
+            </span>
+        </div>
+
+    </section>
+    <section class="check-redio-hide-input">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="custom-radios">
+                        <div>
+                            <input type="radio" id="color-1" name="color" value="color-1" checked>
+                            <label for="color-1">
+                            <span>
+                              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/check-icn.svg" alt="Checked Icon" />
+                            </span>
+                          </label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="color-2" name="color" value="color-2">
+                            <label for="color-2">
+                            <span>
+                              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/check-icn.svg" alt="Checked Icon" />
+                            </span>
+                          </label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="color-3" name="color" value="color-3">
+                            <label for="color-3">
+                            <span>
+                              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/check-icn.svg" alt="Checked Icon" />
+                            </span>
+                          </label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="color-4" name="color" value="color-4">
+                            <label for="color-4">
+                            <span>
+                              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/check-icn.svg" alt="Checked Icon" />
+                            </span>
+                          </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="radio-sec-3">
+        <form action="#">
+            <p>
+                <input type="radio" id="test1" name="radio-group" checked>
+                <label for="test1">Apple</label>
+            </p>
+            <p>
+                <input type="radio" id="test2" name="radio-group">
+                <label for="test2">Peach</label>
+            </p>
+            <p>
+                <input type="radio" id="test3" name="radio-group">
+                <label for="test3">Orange</label>
+            </p>
+        </form>
+    </section>
+    <section class="radio-sec-4">
+        <form action="">
+            <input type="radio" name="rdo" id="yes" checked />
+            <input type="radio" name="rdo" id="no" />
+            <div class="switch">
+                <label for="yes">Yes</label>
+                <label for="no">No</label>
+                <span></span>
+            </div>
+        </form>
+    </section>
+</body>
+
+</html>
