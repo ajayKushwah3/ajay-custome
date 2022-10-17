@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Select 2</title>
+    <style type="text/css">
+        select#foodItemSelectBox {
+            width: 100%;
+            height: 250px;
+        }
+        
+        .foodItemList {
+            display: flex;
+            padding: 15px 0;
+        }
+        
+        .foodItem {
+            flex-grow: 1;
+            flex-basis: 0;
+            padding: 5px;
+        }
+        
+        .foodItemAction {
+            display: block;
+            text-align: center;
+            background: #e1e1e1;
+            padding: 15px;
+            font-family: sans-serif;
+            text-decoration: none;
+            color: #000000;
+            font-weight: 700;
+            font-size: 14px;
+            border-radius: 8px;
+        }
+        
+        .fiAdded .foodItemAction {
+            pointer-events: none;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="foodItemWrapper">
+        <a href="javascript:void(0);" id="refreshFI"><svg fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" width="60px" height="60px"><path d="M 15 3 C 12.031398 3 9.3028202 4.0834384 7.2070312 5.875 A 1.0001 1.0001 0 1 0 8.5058594 7.3945312 C 10.25407 5.9000929 12.516602 5 15 5 C 20.19656 5 24.450989 8.9379267 24.951172 14 L 22 14 L 26 20 L 30 14 L 26.949219 14 C 26.437925 7.8516588 21.277839 3 15 3 z M 4 10 L 0 16 L 3.0507812 16 C 3.562075 22.148341 8.7221607 27 15 27 C 17.968602 27 20.69718 25.916562 22.792969 24.125 A 1.0001 1.0001 0 1 0 21.494141 22.605469 C 19.74593 24.099907 17.483398 25 15 25 C 9.80344 25 5.5490109 21.062074 5.0488281 16 L 8 16 L 4 10 z"/></svg></a>
+        <div class="foodItemList" id="foodItemList"></div>
+        <div class="foodItemElement">
+            <select class="js-example-basic-multiple" id="foodItemSelectBox" name="states[]" multiple="multiple"></select>
+        </div>
+    </div>
+
+
+    <script src="https://fit.codingkloud.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+    <script type="text/javascript">
+        /* ------------------------------------------------------ */
+        /* Global Variables */
+        /* ------------------------------------------------------ */
+        var selectedFoodItemData = [];
+        var select2InitializedData = [];
+        var foodItemSelectBox = jQuery('#foodItemSelectBox');
+        var selFIArray = [];
+
+        /* ------------------------------------------------------ */
+        /* Food Item Json Data Fatch Form DB */
+        /* ------------------------------------------------------ */
+
+        var foodItemPostData = [{
+            "id": 1,
+            "name": "Cashew 1",
+            "measuring_unit": "tbsp",
+            "arabic_name": "كازو",
+            "arabic_measuring_unit": "ملعقة كبيرة",
+            "serving_size": 1,
+            "include_in_dont_like_foods": true
+        }, {
+            "id": 2,
+            "name": "Cashew 2",
+            "measuring_unit": "tbsp",
+            "arabic_name": "كازو",
+            "arabic_measuring_unit": "ملعقة كبيرة",
+            "serving_size": 1,
+            "include_in_dont_like_foods": true
+        }, {
+            "id": 3,
+            "name": "Cashew 3",
+            "measuring_unit": "tbsp",
+            "arabic_name": "كازو",
+            "arabic_measuring_unit": "ملعقة كبيرة",
+            "serving_size": 1,
+            "include_in_dont_like_foods": true
+        }, {
+            "id": 4,
+            "name": "Cashew 4",
+            "measuring_unit": "tbsp",
+            "arabic_name": "كازو",
+            "arabic_measuring_unit": "ملعقة كبيرة",
+            "serving_size": 1,
+            "include_in_dont_like_foods": true
+        }, {
+            "id": 5,
+            "name": "Cashew 5",
+            "measuring_unit": "tbsp",
+            "arabic_name": "كازو",
+            "arabic_measuring_unit": "ملعقة كبيرة",
+            "serving_size": 1,
+            "include_in_dont_like_foods": true
+        }, {
+            "id": 6,
+            "name": "Cashew 6",
+            "measuring_unit": "tbsp",
+            "arabic_name": "كازو",
+            "arabic_measuring_unit": "ملعقة كبيرة",
+            "serving_size": 1,
+            "include_in_dont_like_foods": true
+        }, {
+            "id": 7,
+            "name": "Cashew 7",
+            "measuring_unit": "tbsp",
+            "arabic_name": "كازو",
+            "arabic_measuring_unit": "ملعقة كبيرة",
+            "serving_size": 1,
+            "include_in_dont_like_foods": true
+        }, {
+            "id": 8,
+            "name": "Cashew 8",
+            "measuring_unit": "tbsp",
+            "arabic_name": "كازو",
+            "arabic_measuring_unit": "ملعقة كبيرة",
+            "serving_size": 1,
+            "include_in_dont_like_foods": true
+        }, {
+            "id": 9,
+            "name": "Cashew 9",
+            "measuring_unit": "tbsp",
+            "arabic_name": "كازو",
+            "arabic_measuring_unit": "ملعقة كبيرة",
+            "serving_size": 1,
+            "include_in_dont_like_foods": true
+        }, {
+            "id": 10,
+            "name": "Cashew 10",
+            "measuring_unit": "tbsp",
+            "arabic_name": "كازو",
+            "arabic_measuring_unit": "ملعقة كبيرة",
+            "serving_size": 1,
+            "include_in_dont_like_foods": true
+        }, {
+            "id": 11,
+            "name": "Cashew 11",
+            "measuring_unit": "tbsp",
+            "arabic_name": "كازو",
+            "arabic_measuring_unit": "ملعقة كبيرة",
+            "serving_size": 1,
+            "include_in_dont_like_foods": true
+        }, {
+            "id": 12,
+            "name": "Cashew 12",
+            "measuring_unit": "tbsp",
+            "arabic_name": "كازو",
+            "arabic_measuring_unit": "ملعقة كبيرة",
+            "serving_size": 1,
+            "include_in_dont_like_foods": true
+        }, {
+            "id": 13,
+            "name": "Cashew 13",
+            "measuring_unit": "tbsp",
+            "arabic_name": "كازو",
+            "arabic_measuring_unit": "ملعقة كبيرة",
+            "serving_size": 1,
+            "include_in_dont_like_foods": true
+        }, {
+            "id": 14,
+            "name": "Cashew 14",
+            "measuring_unit": "tbsp",
+            "arabic_name": "كازو",
+            "arabic_measuring_unit": "ملعقة كبيرة",
+            "serving_size": 1,
+            "include_in_dont_like_foods": true
+        }, {
+            "id": 15,
+            "name": "Cashew 15",
+            "measuring_unit": "tbsp",
+            "arabic_name": "كازو",
+            "arabic_measuring_unit": "ملعقة كبيرة",
+            "serving_size": 1,
+            "include_in_dont_like_foods": true
+        }, {
+            "id": 16,
+            "name": "Cashew 16",
+            "measuring_unit": "tbsp",
+            "arabic_name": "كازو",
+            "arabic_measuring_unit": "ملعقة كبيرة",
+            "serving_size": 1,
+            "include_in_dont_like_foods": true
+        }, {
+            "id": 17,
+            "name": "Cashew 17",
+            "measuring_unit": "tbsp",
+            "arabic_name": "كازو",
+            "arabic_measuring_unit": "ملعقة كبيرة",
+            "serving_size": 1,
+            "include_in_dont_like_foods": true
+        }, {
+            "id": 18,
+            "name": "Cashew 18",
+            "measuring_unit": "tbsp",
+            "arabic_name": "كازو",
+            "arabic_measuring_unit": "ملعقة كبيرة",
+            "serving_size": 1,
+            "include_in_dont_like_foods": true
+        }, {
+            "id": 19,
+            "name": "Cashew 19",
+            "measuring_unit": "tbsp",
+            "arabic_name": "كازو",
+            "arabic_measuring_unit": "ملعقة كبيرة",
+            "serving_size": 1,
+            "include_in_dont_like_foods": true
+        }, {
+            "id": 20,
+            "name": "Cashew 20",
+            "measuring_unit": "tbsp",
+            "arabic_name": "كازو",
+            "arabic_measuring_unit": "ملعقة كبيرة",
+            "serving_size": 1,
+            "include_in_dont_like_foods": true
+        }];
+
+        jQuery(document).ready(function() {
+
+            /* ------------------------------------------------------ */
+            /* Generate Rendom Food Item For Select2 */
+            /* ------------------------------------------------------ */
+            function generateRendomFoodItem(foodItemPostData) {
+                rendomLength = 10;
+                rendomfoodItemPostData = [];
+                for (var i = 0; i < rendomLength; i++) {
+                    var idx = Math.floor(Math.random() * foodItemPostData.length);
+                    rendomfoodItemPostData.push(foodItemPostData[idx]);
+                }
+                generateFoodItemList(rendomfoodItemPostData);
+                select2Init();
+                matchAndDisableFI();
+            }
+            generateRendomFoodItem(foodItemPostData);
+
+            jQuery(document).on('click', '#refreshFI', function() {
+                generateRendomFoodItem(foodItemPostData);
+            });
+
+
+            /* ------------------------------------------------------ */
+            /* Generate Food Item For Select2 */
+            /* ------------------------------------------------------ */
+            function generateFoodItemForSelect2(foodItemPostData) {
+
+                foodItemPostData.forEach((element, index) => {
+                    var sfiObj = {
+                        id: foodItemPostData[index].id,
+                        text: foodItemPostData[index].name,
+                        selected: false
+                    };
+                    selectedFoodItemData.push(sfiObj);
+                });
+                select2Init();
+            }
+            generateFoodItemForSelect2(foodItemPostData);
+
+
+            /* ------------------------------------------------------ */
+            /* Generate Food Item List */
+            /* ------------------------------------------------------ */
+
+            function generateFoodItemList(rendomfoodItemPostData) {
+                var rendomFoodItemElement = "";
+                jQuery('#foodItemList').html('');
+                for (let i = 0; i < rendomfoodItemPostData.length; i++) {
+                    rendomFoodItemElement += "<div class='foodItem' id='foodItem_" + rendomfoodItemPostData[i].id + "'><a class='foodItemAction' href='javascript:void(0);' data-food-id='" + rendomfoodItemPostData[i].id + "' data-food-name='" + rendomfoodItemPostData[i].name + "'>" + rendomfoodItemPostData[i].name + "</a></div>";
+                }
+                jQuery('#foodItemList').append(rendomFoodItemElement);
+            }
+
+
+            /* ------------------------------------------------------ */
+            /* Add Item into Select2 On Click */
+            /* ------------------------------------------------------ */
+            jQuery(document).on('click', '.foodItemAction', function() {
+                var fiId = jQuery(this).attr('data-food-id');
+                selFIArray.push(fiId);
+                foodItemSelectBox.val(selFIArray).trigger("change");
+
+            });
+
+
+            /* ------------------------------------------------------ */
+            /* Select2 Init */
+            /* ------------------------------------------------------ */
+
+            function select2Init() {
+                foodItemSelectBox.select2({
+                    multiple: true,
+                    data: selectedFoodItemData
+                });
+            }
+
+            foodItemSelectBox.on("change", function() {
+                selFIArrayChange = [];
+
+                selFIArrayNew = jQuery(this).select2('data');
+
+                for (let i = 0; i < selFIArrayNew.length; i++) {
+                    selFIArrayChange.push(selFIArrayNew[i].id);
+                    selFIArray = selFIArrayChange;
+                }
+
+                matchAndDisableFI();
+            });
+
+            /* ------------------------------------------------------ */
+            /* Match And Desable Food Item Action */
+            /* ------------------------------------------------------ */
+
+            function getCountryByCode(elID) {
+                return select2InitializedData.filter(
+                    function(select2InitializedData) {
+                        return select2InitializedData.id == elID
+                    }
+                );
+            }
+
+
+            function matchAndDisableFI() {
+
+                select2InitializedData = jQuery('#foodItemSelectBox').select2('data');
+
+                jQuery(".foodItem").each(function() {
+                    var elID = jQuery(this).find('.foodItemAction').attr('data-food-id');
+                    var found = getCountryByCode(elID);
+                    if (typeof found[0] != "undefined") {
+                        jQuery('[data-food-id=' + found[0].id + ']').parent().addClass('fiAdded');
+                    } else {
+                        jQuery(this).removeClass('fiAdded');
+                    }
+
+                });
+
+            }
+
+        });
+    </script>
+</body>
+
+</html>
