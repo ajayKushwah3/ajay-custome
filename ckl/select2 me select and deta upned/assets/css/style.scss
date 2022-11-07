@@ -1,0 +1,179 @@
+.select2-container {
+    width: 100% !important;
+}
+
+.select2-container--default .select2-selection--multiple,
+.select2-container--default .select2-selection--single {
+    width: 100% !important;
+    height: unset !important;
+    padding: 14px !important;
+    background: #F6F7F7 !important;
+    border-radius: 5px !important;
+    border: unset;
+    box-shadow: unset;
+    border: 1px solid !important;
+    border-color: #f6f7f7 !important;
+}
+
+.select2-container--open .select2-dropdown--below {
+    margin-top: 0px;
+}
+
+.select2-container--default[dir="rtl"] .select2-selection--single .select2-selection__arrow {
+    display: none;
+}
+
+.Cptoption {
+    padding-top: 100px;
+}
+
+table {
+    border: unset;
+    thead {
+        tr {
+            th {
+                font-weight: 400;
+                font-size: 14px;
+                padding: 17px 14px;
+                line-height: 17px;
+                text-transform: uppercase;
+                color: #3D4047;
+                background: #E5F7F5;
+                border: unset;
+                border-bottom: 10px solid #fff;
+            }
+        }
+    }
+    th {
+        &:first-child {
+            border-radius: 0 5px 5px 0;
+            text-align: left;
+        }
+        &:last-child {
+            border-radius: 5px 0 0 5px;
+            text-align: left;
+        }
+    }
+    tbody {
+        tr {
+            &:last-child {
+                td {
+                    border-bottom: unset;
+                    &:first-child {
+                        border-radius: 0 0 5px 0;
+                    }
+                    &:last-child {
+                        border-radius: 0 0 0 5px;
+                    }
+                }
+            }
+            td {
+                background: #F6F7F7;
+                border: unset;
+                border-bottom: 10px solid #fff;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 20px;
+                padding: 14px;
+                text-align: center;
+                color: #3D4047;
+                &:first-child {
+                    text-align: left;
+                }
+                &:last-child {
+                    text-align: left;
+                    position: relative;
+                }
+                .cdproductname img {
+                    width: 50px;
+                    height: 50px;
+                    object-fit: cover;
+                    border-radius: 5px;
+                    margin-right: 10px;
+                }
+                .cdproductname {
+                    display: flex;
+                    width: 200px;
+                }
+                .cdproductname span {
+                    font-weight: 500;
+                    text-align: right;
+                }
+            }
+        }
+    }
+}
+
+table {
+    width: 100%;
+    tbody {
+        tr {
+            th {
+                border-bottom-width: 5px;
+                .quantity {
+                    text-align: center;
+                }
+            }
+        }
+    }
+    tbody {
+        tr {
+            td {
+                padding: 10px 15px;
+                border-bottom-width: 5px;
+                &:last-child {}
+                .cdproductname {
+                    width: auto;
+                    align-items: center;
+                }
+                &.quantity {}
+                .input-counter {
+                    max-width: 90px;
+                    width: 100%;
+                    display: grid;
+                    background: #fff;
+                    height: 38px;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    border-radius: 3px;
+                    input {
+                        padding: 0;
+                        text-align: center;
+                        border: unset;
+                        border-radius: 0;
+                        background: #fff;
+                    }
+                }
+                .plus-btn,
+                .minus-btn {
+                    display: block;
+                    position: relative;
+                    cursor: pointer;
+                }
+                .plus-btn:after,
+                .minus-btn:after {
+                    content: "";
+                    position: absolute;
+                    width: 13px;
+                    height: 1px;
+                    background: #000;
+                    top: 50%;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                }
+                .plus-btn:before {
+                    content: "";
+                    position: absolute;
+                    width: 1px;
+                    height: 12px;
+                    background: #000;
+                    top: 50%;
+                    left: 0px;
+                    transform: translateY(-45%);
+                    right: 0;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}

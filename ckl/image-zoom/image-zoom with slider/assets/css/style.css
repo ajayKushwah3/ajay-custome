@@ -1,0 +1,115 @@
+.section {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.SignProductBody {
+  display: flex;
+  position: relative;
+  margin: 0 -20px;
+}
+
+.SPRightCart {
+  max-width: 50%;
+  flex: 0 0 50%;
+  width: 100%;
+  padding: 0 20px;
+  position: relative;
+}
+
+.SPLeftCart {
+  max-width: 50%;
+  flex: 0 0 50%;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.SignProductImageThumb {
+  margin-top: 30px;
+}
+
+.slick-prev:focus,
+.slick-next:focus,
+.slick-prev,
+.slick-next {
+  background-color: #000;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 4px;
+  height: 35px;
+  border-radius: 50px;
+  z-index: 9;
+}
+.slick-prev:focus:hover,
+.slick-next:focus:hover,
+.slick-prev:hover,
+.slick-next:hover {
+  background-color: coral;
+}
+
+.slick-next {
+  right: 0;
+}
+
+.slick-prev {
+  left: 0;
+}
+
+.SPItemThumb img {
+  height: 130px;
+  margin: 0 auto;
+}
+
+.SPIitem img {
+  width: 100%;
+  height: 500px;
+}
+
+.drift-bounding-box,
+.drift-zoom-pane {
+  position: absolute;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.2901960784);
+}
+
+@keyframes noop {
+  0% {
+    zoom: 1;
+  }
+}
+@-webkit-keyframes noop {
+  0% {
+    zoom: 1;
+  }
+}
+.drift-zoom-pane.drift-open {
+  display: block;
+}
+
+.drift-zoom-pane.drift-closing,
+.drift-zoom-pane.drift-opening {
+  animation: noop 1ms;
+  -webkit-animation: noop 1ms;
+}
+
+.drift-zoom-pane {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.drift-zoom-pane-loader {
+  display: none;
+}
+
+.drift-zoom-pane img {
+  position: absolute;
+  display: block;
+  max-width: none;
+  max-height: none;
+}/*# sourceMappingURL=style.css.map */

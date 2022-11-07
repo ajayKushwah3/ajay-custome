@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.text {
+  max-width: 1140px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.custome-modal-active {
+  overflow: hidden;
+}
+.custome-modal-active .modal-show-cmb {
+  z-index: 99;
+  display: block;
+  pointer-events: visible;
+}
+
+.custome-modal-body {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  left: 0;
+  top: 0;
+  display: none;
+  pointer-events: none;
+}
+.custome-modal-body .modal-bg-cmb {
+  background: rgba(0, 0, 0, 0.5019607843);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 1;
+  left: 0;
+}
+.custome-modal-body .modal-box-cmb {
+  max-width: 450px;
+  margin: 0 auto;
+  background: #fff;
+  position: absolute;
+  z-index: 9;
+  box-shadow: 0 0 15px 0 #ddd;
+  padding: 30px;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.custome-modal-body .close-btn-cmb {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 20px;
+  cursor: pointer;
+  height: 20px;
+  opacity: 0.7;
+  transition: 0.5s;
+}
+.custome-modal-body .close-btn-cmb:hover {
+  transition: 0.5s;
+  opacity: 1;
+}
+.custome-modal-body .close-btn-cmb::before, .custome-modal-body .close-btn-cmb::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  background-color: #000;
+}
+.custome-modal-body .close-btn-cmb::before {
+  transform: rotate(45deg) translateY(13px);
+}
+.custome-modal-body .close-btn-cmb::after {
+  transform: rotate(-45deg) translateX(-13px);
+}/*# sourceMappingURL=style.css.map */

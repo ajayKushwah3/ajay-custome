@@ -1,0 +1,158 @@
+.select2-container {
+  width: 100% !important;
+}
+
+.select2-container--default .select2-selection--multiple,
+.select2-container--default .select2-selection--single {
+  width: 100% !important;
+  height: unset !important;
+  padding: 14px !important;
+  background: #F6F7F7 !important;
+  border-radius: 5px !important;
+  border: unset;
+  box-shadow: unset;
+  border: 1px solid !important;
+  border-color: #f6f7f7 !important;
+}
+
+.select2-container--open .select2-dropdown--below {
+  margin-top: 0px;
+}
+
+.select2-container--default[dir=rtl] .select2-selection--single .select2-selection__arrow {
+  display: none;
+}
+
+.Cptoption {
+  padding-top: 100px;
+}
+
+table {
+  border: unset;
+}
+table thead tr th {
+  font-weight: 400;
+  font-size: 14px;
+  padding: 17px 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: #3D4047;
+  background: #E5F7F5;
+  border: unset;
+  border-bottom: 10px solid #fff;
+}
+table th:first-child {
+  border-radius: 0 5px 5px 0;
+  text-align: left;
+}
+table th:last-child {
+  border-radius: 5px 0 0 5px;
+  text-align: left;
+}
+table tbody tr:last-child td {
+  border-bottom: unset;
+}
+table tbody tr:last-child td:first-child {
+  border-radius: 0 0 5px 0;
+}
+table tbody tr:last-child td:last-child {
+  border-radius: 0 0 0 5px;
+}
+table tbody tr td {
+  background: #F6F7F7;
+  border: unset;
+  border-bottom: 10px solid #fff;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 14px;
+  text-align: center;
+  color: #3D4047;
+}
+table tbody tr td:first-child {
+  text-align: left;
+}
+table tbody tr td:last-child {
+  text-align: left;
+  position: relative;
+}
+table tbody tr td .cdproductname img {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+table tbody tr td .cdproductname {
+  display: flex;
+  width: 200px;
+}
+table tbody tr td .cdproductname span {
+  font-weight: 500;
+  text-align: right;
+}
+
+table {
+  width: 100%;
+}
+table tbody tr th {
+  border-bottom-width: 5px;
+}
+table tbody tr th .quantity {
+  text-align: center;
+}
+table tbody tr td {
+  padding: 10px 15px;
+  border-bottom-width: 5px;
+}
+table tbody tr td .cdproductname {
+  width: auto;
+  align-items: center;
+}
+table tbody tr td .input-counter {
+  max-width: 90px;
+  width: 100%;
+  display: grid;
+  background: #fff;
+  height: 38px;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-radius: 3px;
+}
+table tbody tr td .input-counter input {
+  padding: 0;
+  text-align: center;
+  border: unset;
+  border-radius: 0;
+  background: #fff;
+}
+table tbody tr td .plus-btn,
+table tbody tr td .minus-btn {
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+table tbody tr td .plus-btn:after,
+table tbody tr td .minus-btn:after {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 1px;
+  background: #000;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+table tbody tr td .plus-btn:before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 12px;
+  background: #000;
+  top: 50%;
+  left: 0px;
+  transform: translateY(-45%);
+  right: 0;
+  margin: 0 auto;
+}/*# sourceMappingURL=style.css.map */

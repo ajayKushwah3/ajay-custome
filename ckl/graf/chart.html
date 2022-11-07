@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Styles -->
+    <style>
+        #chartdiv {
+            width: 100%;
+            height: 860px;
+            position: relative;
+        }
+        
+        #chartdiv:after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: url(/Vector\ \(8\).svg) no-repeat center center;
+            background-size: 14%;
+            background-position: 50% 75%;
+            z-index: -1;
+        }
+    </style>
+    <div id="chartdiv"></div>
+
+
+    <!-- HTML -->
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Resources -->
+    <script src="./index.js"></script>
+    <script src="./xy.js"></script>
+    <script src="./radar.js"></script>
+    <script src="./Animated.js"></script>
+
+    <!-- Chart code -->
+    <script>
+        // if ($(window).width() < 767) {
+        //     am5.ready(function() {
+        //         var root = am5.Root.new("chartdiv");
+
+        //         root.setThemes([
+        //             am5themes_Animated.new(root)
+        //         ]);
+
+        //         var chart = root.container.children.push(
+        //             am5radar.RadarChart.new(root, {
+        //                 panX: false,
+        //                 panY: false,
+        //                 startAngle: 180,
+        //                 endAngle: 360,
+
+        //                 innerRadius: -50
+        //             })
+        //         );
+
+        //         var axisRenderer = am5radar.AxisRendererCircular.new(root, {
+        //             strokeOpacity: 0,
+        //             strokeWidth: 0,
+        //             innerRadius: -40,
+
+
+        //             stdDeviation: 12,
+        //             stroke: am5.color(0xe92e2e),
+        //             minGridDistance: 0
+        //         });
+
+        //         var axis = chart.xAxes.push(
+        //             am5xy.ValueAxis.new(root, {
+        //                 // filter: "drop-shadow(0px 0px 15px rgb(0 0 0 / 0.7))",
+        //                 maxDeviation: 0,
+        //                 min: 0,
+        //                 max: 101,
+        //                 strictMinMax: true,
+        //                 renderer: axisRenderer
+        //             })
+        //         );
+
+        //         function createRange(start, end, color, label) {
+
+        //             var rangeDataItem = axis.makeDataItem({
+        //                 value: start,
+        //                 endValue: end
+        //             });
+
+        //             var range = axis.createAxisRange(rangeDataItem);
+
+        //             rangeDataItem.get("axisFill").setAll({
+
+        //                 visible: true,
+        //                 fill: color,
+        //                 fillOpacity: 1
+        //             });
+
+        //             rangeDataItem.get("tick").setAll({
+
+        //                 visible: false
+        //             });
+
+        //             rangeDataItem.get("label").setAll({
+        //                 text: label,
+        //                 inside: true,
+        //                 radius: 9,
+        //                 fontSize: "10px",
+        //                 fontWeight: "500",
+        //                 fill: am5.color(0xffffff)
+        //             });
+
+        //         }
+
+        //         createRange(1, 20, am5.color(0x94e1fb), "(< 18.5) \n Underweight");
+        //         createRange(21, 40, am5.color(0x7ecd73), "(18.5 - 24.9) \n Normal");
+        //         createRange(41, 60, am5.color(0xfbb974), "(25 - 29.9) \n Overweight");
+        //         createRange(61, 80, am5.color(0xff621f), "(30 - 39.9) \n Obese");
+        //         createRange(81, 100, am5.color(0xf73939), "(> 40) \n Obese \n Morbidly");
+
+        //         // Add clock hand
+        //         var handDataItem = axis.makeDataItem({
+
+        //             value: 0
+        //         });
+
+        //         var hand = handDataItem.set("bullet", am5xy.AxisBullet.new(root, {
+        //             sprite: am5radar.ClockHand.new(root, {
+        //                 filter: "drop-shadow(0px 0px 15px rgb(0 0 0 / 0.7))",
+        //                 radius: am5.percent(52),
+        //                 bottomWidth: 20
+        //             })
+        //         }));
+
+        //         axis.createAxisRange(handDataItem);
+
+        //         handDataItem.get("grid").set("visible", false);
+        //         handDataItem.get("tick").set("visible", false);
+
+
+        //         handDataItem.animate({
+        //             key: "value",
+        //             to: 25,
+
+        //             duration: 800,
+        //             easing: am5.ease.out(am5.ease.cubic)
+        //         });
+
+        //     });
+        // } else {
+        am5.ready(function() {
+            var root = am5.Root.new("chartdiv");
+
+            root.setThemes([
+                am5themes_Animated.new(root)
+            ]);
+
+            var chart = root.container.children.push(
+                am5radar.RadarChart.new(root, {
+                    panX: false,
+                    panY: false,
+                    startAngle: 180,
+                    endAngle: 360,
+                    innerRadius: -50
+                })
+            );
+
+            var axisRenderer = am5radar.AxisRendererCircular.new(root, {
+                strokeOpacity: 1,
+                strokeWidth: 10,
+                filter: "drop-shadow(0px -10px 10px rgb(0 0 0 / 0.2))",
+                stroke: am5.color("#fff"),
+                minGridDistance: 0,
+
+            });
+            var chart = root.container.children.push(
+                am5radar.RadarChart.new(root, {
+
+                    radius: am5.percent(100),
+                    innerRadius: -50,
+                    startAngle: -180,
+                    endAngle: 0
+                })
+            );
+
+            var axis = chart.xAxes.push(
+                am5xy.ValueAxis.new(root, {
+                    // filter: "drop-shadow(0px 0px 15px rgb(0 0 0 / 0.7))",
+                    maxDeviation: 0,
+                    min: 0,
+                    max: 100,
+                    strictMinMax: true,
+                    renderer: axisRenderer
+                })
+            );
+
+
+            function createRange(start, end, color, label) {
+                var rangeDataItem = axis.makeDataItem({
+                    value: start,
+                    endValue: end
+                });
+                var range = axis.createAxisRange(rangeDataItem);
+                rangeDataItem.get("axisFill").setAll({
+                    visible: true,
+                    fill: color,
+                    fillOpacity: 1
+                });
+                rangeDataItem.get("tick").setAll({
+                    visible: false,
+                });
+                rangeDataItem.get("label").setAll({
+                    text: label,
+                    inside: true,
+                    radius: 13,
+                    fontSize: "14px",
+                    fontWeight: "500",
+                    fill: am5.color(0xffffff),
+
+
+                });
+            }
+            createRange(0, 20, am5.color(0x94e1fb), "(< 18.5) \n Underweight");
+            createRange(20.2, 40, am5.color(0x7ecd73), "(18.5 - 24.9) \n Normal");
+            createRange(40.2, 60, am5.color(0xfbb974), "(25 - 29.9) \n Overweight");
+            createRange(60.2, 80, am5.color(0xff621f), "(30 - 39.9) \n Obese");
+            createRange(80.2, 100, am5.color(0xf73939), "(> 40) \n Obese \n Morbidly");
+            // Add clock hand
+            var handDataItem = axis.makeDataItem({
+                value: 0
+            });
+            var hand = handDataItem.set("bullet", am5xy.AxisBullet.new(root, {
+                sprite: am5radar.ClockHand.new(root, {
+                    filter: "drop-shadow(0px 0px 15px rgb(0 0 0 / 0.7))",
+                    radius: am5.percent(70),
+                    bottomWidth: 20
+                })
+            }));
+
+            axis.createAxisRange(handDataItem);
+            handDataItem.get("grid").set("visible", false);
+            handDataItem.get("tick").set("visible", false);
+            handDataItem.animate({
+                key: "value",
+                to: 25,
+                duration: 800,
+                easing: am5.ease.out(am5.ease.cubic)
+            });
+
+        });
+        // }
+    </script>
+
+</body>
+
+</html>

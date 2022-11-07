@@ -1,0 +1,162 @@
+!
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>slick-slide</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/slick.css">
+</head>
+
+<body>
+    <div class="testimonial">
+        <div class="item">
+            <div class="tmCrad">
+                <p>We have a sectional that is almost 9 feet long! This held it together perfectly and for way less cost then some of the other options. I would recommend getting them for both the front and back legs.... we only purchased for the front.
+                    Excellent product!</p>
+                <div class="clientName">
+                    <p>- Abbey K.</p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="tmCrad">
+                <p>We have a sectional that is almost 9 feet long! This held it together perfectly and for way less cost then some of the other options. I would recommend getting them for both the front and back legs.... we only purchased for the front.
+                    Excellent product!</p>
+                <div class="clientName">
+                    <p>- Abbey K.</p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="tmCrad">
+                <p>We have a sectional that is almost 9 feet long! This held it together perfectly and for way less cost then some of the other options. I would recommend getting them for both the front and back legs.... we only purchased for the front.
+                    Excellent product!</p>
+                <div class="clientName">
+                    <p>- Abbey K.</p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="tmCrad">
+                <p>We have a sectional that is almost 9 feet long! This held it together perfectly and for way less cost then some of the other options. I would recommend getting them for both the front and back legs.... we only purchased for the front.
+                    Excellent product!</p>
+                <div class="clientName">
+                    <p>- Abbey K.</p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="tmCrad">
+                <p>We have a sectional that is almost 9 feet long! This held it together perfectly and for way less cost then some of the other options. I would recommend getting them for both the front and back legs.... we only purchased for the front.
+                    Excellent product!</p>
+                <div class="clientName">
+                    <p>- Abbey K.</p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="tmCrad">
+                <p>We have a sectional that is almost 9 feet long! This held it together perfectly and for way less cost then some of the other options. I would recommend getting them for both the front and back legs.... we only purchased for the front.
+                    Excellent product!</p>
+                <div class="clientName">
+                    <p>- Abbey K.</p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="tmCrad">
+                <p>We have a sectional that is almost 9 feet long! This held it together perfectly and for way less cost then some of the other options. I would recommend getting them for both the front and back legs.... we only purchased for the front.
+                    Excellent product!</p>
+                <div class="clientName">
+                    <p>- Abbey K.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/slick.min.js"></script>
+</body>
+<script>
+    jQuery(document).ready(function() {
+        if (jQuery('.testimonial').length) {
+
+            jQuery('.testimonial').on('init', function() {
+                jQuery('.slick-slide').removeClass('wp-new-class');
+
+                jQuery('.slick-center').prev().addClass('wp-new-class');
+                jQuery('.slick-center').addClass('wp-new-class');
+
+            });
+
+            jQuery('.testimonial').on('afterChange', function() {
+
+                jQuery('.slick-slide').removeClass('wp-new-class');
+
+                jQuery('.slick-center').prev().addClass('wp-new-class');
+                jQuery('.slick-center').addClass('wp-new-class');
+
+            });
+            jQuery('.testimonial').slick({
+                dots: false,
+                infinite: true,
+                speed: 300,
+                centerMode: true,
+                centerPadding: '360px',
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                responsive: [{
+                        breakpoint: 1600,
+                        settings: {
+                            slidesToShow: 2,
+                            centerPadding: '220px',
+                            slidesToScroll: 1
+                        }
+                    }, {
+                        breakpoint: 1440,
+                        settings: {
+                            slidesToShow: 2,
+                            centerPadding: '200px',
+                            slidesToScroll: 1
+                        }
+                    }, {
+                        breakpoint: 1200,
+                        settings: {
+                            slidesToShow: 2,
+                            centerPadding: '160px',
+                            slidesToScroll: 1
+                        }
+                    }, {
+                        breakpoint: 992,
+                        settings: {
+                            slidesToShow: 1,
+                            centerPadding: '100px',
+                            slidesToScroll: 1
+                        }
+                    }, {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            centerPadding: '60px',
+                            slidesToScroll: 1
+                        }
+                    }
+
+                ]
+            });
+        }
+    });
+</script>
+
+</html>
